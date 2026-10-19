@@ -67,6 +67,16 @@
     }
   };
 
+  // Visite anonime con GoatCounter: nessun cookie, nessun IP salvato. Non conta in locale.
+  var GOATCOUNTER = 'nta-bibbia';
+  if (GOATCOUNTER !== 'NOME' && /\.github\.io$/.test(location.hostname)) {
+    var gc = document.createElement('script');
+    gc.async = true;
+    gc.src = 'https://gc.zgo.at/count.js';
+    gc.dataset.goatcounter = 'https://' + GOATCOUNTER + '.goatcounter.com/count';
+    document.head.appendChild(gc);
+  }
+
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-tema]');
     if (!b) return;
