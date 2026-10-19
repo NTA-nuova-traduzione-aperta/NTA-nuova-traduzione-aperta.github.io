@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Le modifiche · NTA</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/nta-icona-192.png">
+<meta property="og:image" content="https://nta-nuova-traduzione-aperta.github.io/assets/nta-logo-1200.png">
+<meta property="og:title" content="Le modifiche · Nuova Traduzione Aperta">
+<meta name="description" content="Alcune delle correzioni fatte alla NTA, con il testo di prima, quello di adesso e il motivo. Lo storico completo è su GitHub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/nta.css">
+<script src="../assets/nta.js"></script>
+</head>
+<body>
+<div class="sheet">
+
+<header class="mast pad">
+  <a class="brand" href="../" aria-label="NTA, Nuova Traduzione Aperta, home">
+    <img class="on-light" src="../assets/nta-logo-inchiostro.svg" alt="NTA" width="66" height="30">
+    <img class="on-dark" src="../assets/nta-logo-su-scuro.svg" alt="NTA" width="66" height="30">
+  </a>
+  <nav aria-label="Sezioni"><ul>
+    <li><a href="../leggi/">Leggi</a></li>
+    <li><a href="../revisione/">Revisione 26.11</a></li>
+    <li><a href="./" aria-current="page">Modifiche</a></li>
+    <li><a href="../usa/">Usala</a></li>
+  </ul></nav>
+  <div class="end">
+    <a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia">GitHub</a>
+    <button class="round" type="button" data-tema aria-label="Cambia tema chiaro o scuro">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="pad" style="padding-block:20px 40px" aria-labelledby="titolo">
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))">
+      <div class="tile" style="display:flex;flex-direction:column;justify-content:space-between;gap:28px">
+        <h1 id="titolo" style="font-size:clamp(3rem,8vw,6rem);line-height:.95;letter-spacing:-.02em">Le modifiche</h1>
+        <p class="lead">Ogni correzione alla NTA è pubblica, con il motivo. Qui ne trovi alcune, scelte per far vedere che tipo di lavoro facciamo: il testo di prima, quello di adesso e perché è cambiato.</p>
+      </div>
+      <a class="tile solid" href="https://github.com/NTA-nuova-traduzione-aperta/bibbia/tree/main/modifiche" style="display:flex;flex-direction:column;justify-content:space-between;gap:28px;text-decoration:none">
+        <p class="caps">Versetti corretti<br>finora</p>
+        <div>
+          <p class="big" data-s="cambiati">4.440</p>
+          <p style="margin-top:12px;display:flex;align-items:center;gap:12px">Lo storico completo su GitHub <span class="go" aria-hidden="true" style="width:44px;height:44px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span></p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section pad" aria-label="Esempi di modifiche">
+    <div class="filters" role="group" aria-label="Filtra per tipo" id="filters"></div>
+    <div class="changes" id="changes"><p class="wait">Le modifiche si caricano da <a href="../modifiche.json">modifiche.json</a>.</p></div>
+    <p style="margin-top:28px" class="lead">Hai trovato un versetto da correggere? <a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia/issues">Apri una segnalazione</a>: anche la tua proposta finirà nello storico, con il suo motivo.</p>
+  </section>
+</main>
+
+<footer class="pad">
+  <div>
+    <h4>Licenza</h4>
+    <p>Testo della NTA: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it">CC BY-SA 4.0</a>.</p>
+    <p>«Prima» è il testo della <a href="https://openbible.uk">Open Translation Bible</a>, edizione italiana, da cui la NTA deriva.</p>
+  </div>
+  <div>
+    <h4>Perché lo storico</h4>
+    <p>La licenza CC BY-SA chiede di indicare le modifiche fatte all'opera originale: noi le pubblichiamo tutte, una per una.</p>
+    <p>NTA · Nuova Traduzione Aperta</p>
+  </div>
+</footer>
+
+</div>
+<script>
+(function () {
+  var box = document.getElementById('changes'), bar = document.getElementById('filters');
+  var dati = [], filtro = 'Tutte';
+
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  // differenze parola per parola (sottosequenza comune più lunga sui token, spazi compresi)
+  function diff(a, b) {
+    var x = a.split(/(\s+)/), y = b.split(/(\s+)/), n = x.length, m = y.length, i, j;
+    var L = []; for (i = 0; i <= n; i++) { L.push(new Array(m + 1).fill(0)); }
+    for (i = n - 1; i >= 0; i--) for (j = m - 1; j >= 0; j--) L[i][j] = x[i] === y[j] ? L[i + 1][j + 1] + 1 : Math.max(L[i + 1][j], L[i][j + 1]);
+    var A = '', B = ''; i = 0; j = 0;
+    while (i < n || j < m) {
+      if (i < n && j < m && x[i] === y[j]) { A += esc(x[i]); B += esc(y[j]); i++; j++; }
+      else if (j < m && (i === n || L[i][j + 1] >= L[i + 1][j])) { B += /^\s+$/.test(y[j]) ? esc(y[j]) : '<ins>' + esc(y[j]) + '</ins>'; j++; }
+      else { A += /^\s+$/.test(x[i]) ? esc(x[i]) : '<del>' + esc(x[i]) + '</del>'; i++; }
+    }
+    return [A.replace(/<\/del>(\s+)<del>/g, '$1'), B.replace(/<\/ins>(\s+)<ins>/g, '$1')];
+  }
+
+  function render() {
+    box.innerHTML = '';
+    dati.filter(function (d) { return filtro === 'Tutte' || d.tipo === filtro; }).forEach(function (d) {
+      var p = diff(d.prima, d.dopo), r = d.ref.split(':');
+      var a = document.createElement('article');
+      a.className = 'tile white change';
+      a.innerHTML =
+        '<header><h3>' + esc(d.dove) + '</h3><span class="badge">' + esc(d.tipo) + '</span></header>' +
+        '<div class="side"><span class="label">Prima</span><p class="verse">' + p[0] + '</p></div>' +
+        '<div class="side"><span class="label">Adesso</span><p class="verse">' + p[1] + '</p></div>' +
+        '<div class="foot"><p>' + esc(d.perche) + '</p>' +
+        (d.nota ? '<p class="nota"><b>Nota per il lettore:</b> ' + esc(d.nota) + '</p>' : '') +
+        '<p class="links"><a href="../leggi/#' + r[0] + '-' + r[1] + '-' + r[2] + '">Leggi il capitolo</a>' +
+        '<a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia/commits/main/' + d.file + '">Storico del libro ↗</a></p></div>';
+      box.appendChild(a);
+    });
+  }
+
+  fetch('../modifiche.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (m) {
+    dati = m.modifiche;
+    document.querySelectorAll('[data-s="cambiati"]').forEach(function (el) { el.textContent = NTA.num(m.totale); });
+    ['Tutte'].concat(dati.map(function (d) { return d.tipo; }).filter(function (t, i, a) { return a.indexOf(t) === i; })).forEach(function (t) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = t; b.setAttribute('aria-pressed', t === filtro);
+      b.onclick = function () {
+        filtro = t;
+        bar.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+        render();
+      };
+      bar.appendChild(b);
+    });
+    render();
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Usa la NTA · NTA</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/nta-icona-192.png">
+<meta property="og:image" content="https://nta-nuova-traduzione-aperta.github.io/assets/nta-logo-1200.png">
+<meta property="og:title" content="Usa la NTA · Nuova Traduzione Aperta">
+<meta name="description" content="Come usare la NTA in app, siti, libri e studi: licenza, attribuzione, dove sono i file, formato del testo e dell'interlineare, esempi di codice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/nta.css">
+<script src="../assets/nta.js"></script>
+</head>
+<body>
+<div class="sheet">
+
+<header class="mast pad">
+  <a class="brand" href="../" aria-label="NTA, Nuova Traduzione Aperta, home">
+    <img class="on-light" src="../assets/nta-logo-inchiostro.svg" alt="NTA" width="66" height="30">
+    <img class="on-dark" src="../assets/nta-logo-su-scuro.svg" alt="NTA" width="66" height="30">
+  </a>
+  <nav aria-label="Sezioni"><ul>
+    <li><a href="../leggi/">Leggi</a></li>
+    <li><a href="../revisione/">Revisione 26.11</a></li>
+    <li><a href="../modifiche/">Modifiche</a></li>
+    <li><a href="./" aria-current="page">Usala</a></li>
+  </ul></nav>
+  <div class="end">
+    <a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia">GitHub</a>
+    <button class="round" type="button" data-tema aria-label="Cambia tema chiaro o scuro">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="pad" style="padding-block:20px 40px" aria-labelledby="titolo">
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))">
+      <div class="tile" style="display:flex;flex-direction:column;justify-content:space-between;gap:28px">
+        <h1 id="titolo" style="font-size:clamp(3rem,8vw,6rem);line-height:.95;letter-spacing:-.02em">Usa la NTA</h1>
+        <p class="lead">In un'app, in un sito, in un libro, in una presentazione o in uno studio: puoi farlo liberamente, senza chiedere il permesso. Bastano tre cose.</p>
+      </div>
+      <div class="tile solid" style="display:flex;flex-direction:column;gap:16px">
+        <p class="caps">In breve</p>
+        <p><b>1.</b> Cita la NTA e la Open Translation Bible, con la licenza.</p>
+        <p><b>2.</b> Se cambi il testo, dillo e pubblica le modifiche con la stessa licenza, CC BY-SA 4.0.</p>
+        <p><b>3.</b> Non presentare il testo modificato come se fosse la NTA.</p>
+      </div>
+    </div>
+    <nav class="toc" style="margin-top:22px" aria-label="In questa pagina">
+      <a href="#attribuzione">Attribuzione</a><a href="#file">I file</a><a href="#testo">Formato del testo</a>
+      <a href="#interlineare">Interlineare</a><a href="#convenzioni">Convenzioni</a><a href="#codice">Esempi di codice</a><a href="#versioni">Versioni</a>
+    </nav>
+  </section>
+
+  <section class="section pad" id="attribuzione" aria-labelledby="t-attr">
+    <div class="head"><h2 id="t-attr">Attribuzione</h2><p>Mettila dove si vede: nei crediti dell'app, a piè di pagina del sito, nel colophon del libro.</p></div>
+    <div class="doc">
+      <div class="tile white">
+        <h3>Testo da copiare</h3>
+        <div class="copy">
+          <blockquote id="attr">NTA — Nuova Traduzione Aperta (https://nta-nuova-traduzione-aperta.github.io), derivata dalla Open Translation Bible, edizione italiana (https://openbible.uk), CC BY-SA 4.0.</blockquote>
+          <button type="button" data-copia="attr">Copia</button>
+        </div>
+        <p>Per una citazione breve, sotto un versetto, basta la sigla: <code>Mc 1,17 (NTA)</code>.</p>
+      </div>
+      <div class="grid">
+        <div class="tile white"><h3>Se non cambi niente</h3><p>Usa il testo così com'è, con l'attribuzione. Puoi anche venderlo, per esempio stampato: la licenza lo permette.</p></div>
+        <div class="tile white"><h3>Se lo cambi</h3><p>Indica che è stato modificato e pubblica il risultato con la stessa licenza CC BY-SA 4.0. Ci fa piacere se ci proponi le correzioni: possono servire a tutti.</p></div>
+        <div class="tile white"><h3>Se usi solo i titoli o l'interlineare</h3><p>Valgono le stesse regole: anche titoli di sezione, note e interlineare sono sotto CC BY-SA 4.0.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pad" id="file" aria-labelledby="t-file">
+    <div class="head"><h2 id="t-file">I file</h2><p>Tutto è nel repo pubblico <a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia">bibbia</a>, in JSON, un file per libro.</p></div>
+    <div class="doc">
+      <div class="tile white">
+        <table>
+          <thead><tr><th>Percorso</th><th>Contenuto</th></tr></thead>
+          <tbody>
+            <tr><td><code>testo/41-marco.json</code></td><td>Versetti, titoli di sezione, paragrafi e note di un libro</td></tr>
+            <tr><td><code>interlineare/41-marco.json</code></td><td>Ebraico o greco parola per parola, con numero Strong, gloss e allineamento al testo NTA</td></tr>
+            <tr><td><code>modifiche/AAAA-MM.md</code></td><td>Le modifiche del mese, con il motivo di ciascuna</td></tr>
+            <tr><td><code>meta.json</code></td><td>Licenza, attribuzione e conteggi</td></tr>
+          </tbody>
+        </table>
+        <p>I nomi dei file sono il numero del libro (da <code>01</code> a <code>66</code>) e il nome in minuscolo senza accenti. Si possono scaricare direttamente, anche da una pagina web (CORS aperto):</p>
+        <pre>https://raw.githubusercontent.com/NTA-nuova-traduzione-aperta/bibbia/main/testo/41-marco.json</pre>
+        <p id="elenco" class="wait"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pad" id="testo" aria-labelledby="t-testo">
+    <div class="head"><h2 id="t-testo">Formato del testo</h2><p>Un oggetto per libro, un versetto per riga: i diff su GitHub restano leggibili.</p></div>
+    <div class="doc">
+      <pre>{"book":41,"name":"Marco","abbr":"Mc","verses":[
+{"c":1,"v":1,"t":"Giovanni prepara la via","x":"Inizio del vangelo di Gesù Cristo, Figlio di Dio,"},
+{"c":16,"v":9,"p":1,"x":"[Ora, dopo che fu risorto…]","n":"I vv. 9-20 mancano nei manoscritti più antichi…"},
+…
+]}</pre>
+      <div class="tile white">
+        <table>
+          <thead><tr><th>Campo</th><th>Significato</th></tr></thead>
+          <tbody>
+            <tr><td><code>c</code>, <code>v</code></td><td>Capitolo e versetto, nella numerazione delle Bibbie italiane</td></tr>
+            <tr><td><code>x</code></td><td>Testo del versetto. <code>\n</code> separa le righe delle parti poetiche e delle citazioni</td></tr>
+            <tr><td><code>t</code></td><td>Titolo di sezione che precede il versetto (facoltativo). È un aiuto alla lettura, non fa parte del testo biblico</td></tr>
+            <tr><td><code>p</code></td><td><code>1</code> se il versetto apre un paragrafo (facoltativo)</td></tr>
+            <tr><td><code>n</code></td><td>Nota per il lettore (facoltativa): varianti dei manoscritti e scelte di traduzione. Nelle edizioni stampate va a piè di pagina</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pad" id="interlineare" aria-labelledby="t-int">
+    <div class="head"><h2 id="t-int">Interlineare</h2><p>Per chi vuole mostrare l'originale sotto il testo, o collegare una parola italiana al suo termine ebraico o greco.</p></div>
+    <div class="doc">
+      <pre>{"c":1,"v":1,"lang":"el","text":"Ἀρχὴ τοῦ εὐαγγελίου Ἰησοῦ Χριστοῦ Υἱοῦ Θεοῦ.",
+ "tr":"Archē tou euaggeliou Iēsou Christou HYiou Theou",
+ "words":[{"s":"G746","en":"[The] beginning","it":"Inizio"},{"s":"G3588","en":"of the","it":"del"},…],
+ "al":[0,-1,2,4,5,6,8]}</pre>
+      <div class="tile white">
+        <table>
+          <thead><tr><th>Campo</th><th>Significato</th></tr></thead>
+          <tbody>
+            <tr><td><code>lang</code></td><td><code>he</code> ebraico (Westminster Leningrad Codex), <code>el</code> greco (Nestle 1904)</td></tr>
+            <tr><td><code>text</code>, <code>tr</code></td><td>Testo originale, con le parole separate da spazi, e traslitterazione</td></tr>
+            <tr><td><code>words[i]</code></td><td>La parola <code>i</code> del testo originale: <code>s</code> numero Strong, <code>en</code> e <code>it</code> gloss</td></tr>
+            <tr><td><code>al[i]</code></td><td>Posizione della parola corrispondente nel versetto NTA, contando da 0; <code>-1</code> se non ce n'è una</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pad" id="convenzioni" aria-labelledby="t-conv">
+    <div class="head"><h2 id="t-conv">Convenzioni</h2><p>Scelte che valgono per tutta la Bibbia: tenerle aiuta i lettori a riconoscere la NTA.</p></div>
+    <div class="grid">
+      <div class="tile white"><h3>Parentesi quadre</h3><p>Racchiudono i passi che mancano nei manoscritti più antichi, come Mc 16,9-20 e Gv 7,53-8,11. Restano nel testo, con una nota.</p></div>
+      <div class="tile white"><h3>Numerazione italiana</h3><p>I versetti seguono le Bibbie italiane: Levitico 5,20-26 corrisponde a 6,1-7 delle inglesi, e i titoli dei Salmi aprono il versetto 1.</p></div>
+      <div class="tile white"><h3>Pronomi riferiti a Dio</h3><p>Con la maiuscola: Lui, Suo, Mio. Nel testo se ne trovano ancora in minuscolo: si stanno uniformando con la revisione.</p></div>
+      <div class="tile white"><h3>Virgolette</h3><p>Tipografiche: “ ” per il discorso diretto, ‘ ’ per quello dentro un altro. Una citazione può aprirsi in un versetto e chiudersi in un altro.</p></div>
+      <div class="tile white"><h3>Nomi propri</h3><p>Vicini all'originale: Abramo e poi Abraamo, Aronne, Beer-Sceba, Goshen, il Faraone. Sono gli stessi in ogni libro.</p></div>
+      <div class="tile white"><h3>Note</h3><p>Il campo <code>n</code> è per il lettore: se mostri il testo, mostra anche la nota, almeno come rimando.</p></div>
+    </div>
+  </section>
+
+  <section class="section pad" id="codice" aria-labelledby="t-cod">
+    <div class="head"><h2 id="t-cod">Esempi di codice</h2><p>Leggere un versetto, in JavaScript e in Python.</p></div>
+    <div class="doc">
+      <pre>// JavaScript, anche nel browser
+const url = 'https://raw.githubusercontent.com/NTA-nuova-traduzione-aperta/bibbia/main/testo/43-giovanni.json';
+const libro = await (await fetch(url)).json();
+const v = libro.verses.find((x) =&gt; x.c === 3 &amp;&amp; x.v === 16);
+console.log(`${libro.abbr} ${v.c},${v.v} — ${v.x} (NTA)`);</pre>
+      <pre># Python
+import json, urllib.request
+url = "https://raw.githubusercontent.com/NTA-nuova-traduzione-aperta/bibbia/main/testo/19-salmi.json"
+libro = json.load(urllib.request.urlopen(url))
+for v in libro["verses"]:
+    if v["c"] == 23:
+        print(v["v"], v["x"].replace("\n", " / "))</pre>
+      <p>Se la tua app funziona senza connessione, scarica i file una volta e aggiornali quando esce una nuova versione.</p>
+    </div>
+  </section>
+
+  <section class="section pad" id="versioni" aria-labelledby="t-ver">
+    <div class="head"><h2 id="t-ver">Versioni</h2><p>Il ramo <code>main</code> è il testo in revisione: cambia spesso.</p></div>
+    <div class="grid">
+      <div class="tile solid"><h3>Revisioni stabili</h3><p>Ogni revisione ha il nome dell'anno e del mese in cui esce: la prima sarà la <b>26.11</b>, a novembre 2026. Avrà un tag su GitHub, così potrai fissare la tua app su un testo che non cambia.</p><p style="margin-top:14px"><a class="btn" href="../revisione/">A che punto è la 26.11</a></p></div>
+      <div class="tile white"><h3>Dicci che la usi</h3><p>Non è obbligatorio, ma ci aiuta: <a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia/issues">scrivici su GitHub</a> e metteremo il tuo progetto tra quelli che usano la NTA. <a href="https://github.com/chemickypes/hbible">HBible</a> è il primo.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="pad">
+  <div>
+    <h4>Licenza</h4>
+    <p>Testo della NTA: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it">CC BY-SA 4.0</a>. Questa pagina è un riassunto: vale il testo della licenza.</p>
+    <p>Deriva dalla <a href="https://openbible.uk">Open Translation Bible</a>, edizione italiana, con la stessa licenza.</p>
+  </div>
+  <div>
+    <h4>Fonti dell'interlineare</h4>
+    <p>Westminster Leningrad Codex per l'ebraico e Nestle 1904 per il greco, di pubblico dominio.</p>
+    <p>NTA · Nuova Traduzione Aperta</p>
+  </div>
+</footer>
+
+</div>
+<script>
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('[data-copia]');
+  if (!b) return;
+  navigator.clipboard.writeText(document.getElementById(b.dataset.copia).textContent.trim()).then(function () {
+    b.textContent = 'Copiato'; setTimeout(function () { b.textContent = 'Copia'; }, 1600);
+  });
+});
+NTA.stato('../').then(function (s) {
+  var el = document.getElementById('elenco');
+  el.classList.remove('wait');
+  el.innerHTML = '<b>Tutti i file:</b> ' + s.libri.map(function (l) {
+    var f = l.file.replace('testo/', '');
+    return '<a href="https://raw.githubusercontent.com/NTA-nuova-traduzione-aperta/bibbia/main/' + l.file + '"><code>' + f + '</code></a>';
+  }).join(' ');
+}).catch(function () {});
+</script>
+</body>
+</html>

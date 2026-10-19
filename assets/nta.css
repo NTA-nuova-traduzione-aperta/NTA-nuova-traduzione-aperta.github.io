@@ -202,3 +202,79 @@ footer p + p { margin-top: 6px; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .on-dark { display: block !important; } :root:not([data-theme="light"]) .on-light { display: none !important; } }
 :root[data-theme="dark"] .on-dark { display: block !important; }
 :root[data-theme="dark"] .on-light { display: none !important; }
+
+/* pagina /modifiche/ */
+.changes { display: grid; gap: 14px; }
+.change { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; padding: 0; overflow: hidden; }
+.change > header { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; padding: 20px 24px 0; }
+.change h3 { font-size: 1.35rem; font-weight: 400; }
+.change .side { padding: 16px 24px 20px; }
+.change .side + .side { border-left: 1px solid var(--line); }
+.change .label { display: block; margin-bottom: 8px; }
+.change .verse { font-size: 1.05rem; white-space: pre-line; }
+.change del { text-decoration: line-through; text-decoration-color: var(--rubric); color: var(--muted); background: color-mix(in srgb, var(--rubric) 9%, transparent); border-radius: 3px; }
+.change ins { text-decoration: none; background: var(--soft); border-radius: 3px; }
+.change .foot { grid-column: 1 / -1; border-top: 1px solid var(--line); padding: 16px 24px 20px; display: grid; gap: 10px; }
+.change .foot p { color: var(--ink); }
+.change .nota { color: var(--muted); font-size: .92rem; }
+.change .links { display: flex; gap: 18px; flex-wrap: wrap; font-size: .9rem; color: var(--muted); }
+@media (max-width: 700px) { .change { grid-template-columns: 1fr; } .change .side + .side { border-left: 0; border-top: 1px solid var(--line); } }
+
+/* pagina /usa/ */
+.doc { display: grid; gap: 14px; }
+.doc h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 10px; }
+.doc p + p, .doc p + pre, .doc pre + p, .doc table + p { margin-top: 12px; }
+pre, code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .86rem; }
+pre { margin: 0; padding: 16px 18px; border-radius: 12px; background: var(--solid); color: var(--on-solid); overflow-x: auto; line-height: 1.5; }
+:not(pre) > code { background: var(--soft); padding: 1px 6px; border-radius: 5px; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { text-align: left; padding: 9px 10px 9px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 500; color: var(--muted); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; }
+.copy { display: flex; gap: 12px; align-items: flex-start; flex-wrap: wrap; }
+.copy blockquote { margin: 0; flex: 1 1 320px; font-family: var(--serif); font-size: 1.05rem; }
+.copy button { font: inherit; font-size: .9rem; border-radius: 999px; padding: 8px 16px; border: 1px solid var(--line); background: var(--tile); color: var(--ink); cursor: pointer; }
+.toc { display: flex; gap: 8px; flex-wrap: wrap; }
+.toc a { border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; text-decoration: none; font-size: .9rem; }
+
+/* pagina /leggi/ */
+.reader-bar { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--sheet) 92%, transparent); backdrop-filter: blur(8px);
+  border-block: 1px solid var(--line); padding-block: 10px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.reader-bar .sp { flex: 1; }
+.chip { font: inherit; font-size: .95rem; border: 1px solid var(--line); background: var(--tile); color: var(--ink); border-radius: 999px; padding: 8px 16px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.chip.dark, .chip[aria-pressed="true"] { background: var(--solid); color: var(--on-solid); border-color: transparent; }
+.chip:disabled { opacity: .4; cursor: default; }
+.picker { padding-block: 18px; border-bottom: 1px solid var(--line); }
+.picker[hidden] { display: none; }
+.picker .cells { grid-template-columns: repeat(auto-fill, minmax(58px, 1fr)); }
+.picker button.cell { font: inherit; font-size: .82rem; font-weight: 500; cursor: pointer; background: transparent; }
+.picker button.cell.s-rivisto { background: var(--tile); color: var(--ink); border-color: var(--line); }
+.picker button.cell[aria-current="true"] { background: var(--solid); color: var(--on-solid); border-color: transparent; }
+.page { max-width: 44rem; margin: 0 auto; padding-block: 36px 56px; font-size: var(--fs, 1.18rem); }
+.page h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); line-height: 1.05; }
+.page .state { margin: 10px 0 26px; color: var(--muted); font-size: .9rem; }
+.page h2 { font-family: var(--sans); font-size: 1rem; font-weight: 500; margin: 1.6em 0 .5em; color: var(--rubric); letter-spacing: .01em; }
+.page .txt { font-family: var(--serif); line-height: 1.75; }
+.page .txt p { margin: 0 0 .7em; }
+.page .v { border-radius: 4px; cursor: pointer; }
+.page .v:hover { background: color-mix(in srgb, var(--soft) 55%, transparent); }
+.page .v.on { background: var(--soft); }
+.page .v sup { font-family: var(--sans); font-size: .58em; color: var(--rubric); margin: 0 3px 0 2px; font-weight: 500; }
+.page .poem { display: block; padding-left: 1.4em; text-indent: -1.4em; }
+.page .fn { font-family: var(--sans); font-size: .62em; vertical-align: super; color: var(--rubric); text-decoration: none; margin-left: 1px; }
+.page .notes { margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .92rem; color: var(--muted); }
+.page .notes p + p { margin-top: 8px; }
+.orig { display: block; margin: 10px 0 14px; padding: 14px; border-radius: 14px; background: var(--tile); border: 1px solid var(--line); font-family: var(--sans); font-size: .95rem; line-height: 1.3; text-indent: 0; }
+.orig .words { display: flex; flex-wrap: wrap; gap: 8px; }
+.orig .words[dir="rtl"] { direction: rtl; }
+.orig .w { display: grid; gap: 3px; padding: 6px 8px; border-radius: 9px; background: var(--sheet); text-align: center; direction: ltr; }
+.orig .w b { font-weight: 400; font-size: 1.25rem; font-family: "SBL Hebrew", "Ezra SIL", "Noto Serif Hebrew", "Noto Serif", "Times New Roman", serif; }
+.orig .w span { font-size: .8rem; color: var(--ink); }
+.orig .w small { font-size: .68rem; color: var(--muted); }
+.orig .tr { margin-top: 10px; color: var(--muted); font-size: .85rem; font-style: italic; }
+.pager { display: flex; justify-content: space-between; gap: 10px; margin-top: 40px; }
+@media (max-width: 520px) {
+  .reader-bar { flex-wrap: nowrap; gap: 6px; }
+  .reader-bar .chip { padding: 7px 12px; font-size: .9rem; white-space: nowrap; }
+  .reader-bar #scegli { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+}
+#elenco code { white-space: nowrap; }

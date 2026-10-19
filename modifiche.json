@@ -1,0 +1,130 @@
+{
+ "aggiornato": "2026-10-19",
+ "totale": 4440,
+ "modifiche": [
+  {
+   "ref": "1:1:2",
+   "libro": "Genesi",
+   "dove": "Genesi 1,2",
+   "tipo": "Fedeltà all'originale",
+   "prima": "Ora la terra era una desolazione informe, e le tenebre coprivano la superficie dell'abisso, mentre lo Spirito di Dio aleggiava sulle acque.",
+   "dopo": "Ora la terra era senza forma e vuota, e le tenebre coprivano la superficie dell'abisso, mentre lo Spirito di Dio aleggiava sulle acque.",
+   "perche": "L'ebraico tohu wabohu descrive una terra «senza forma e vuota», non una rovina: «desolazione» aggiungeva un'idea che il testo non ha.",
+   "file": "testo/01-genesi.json"
+  },
+  {
+   "ref": "1:3:15",
+   "libro": "Genesi",
+   "dove": "Genesi 3,15",
+   "tipo": "Fedeltà all'originale",
+   "prima": "E porrò inimicizia tra te e la donna, e tra la tua discendenza e la sua; egli ti schiaccerà la testa e tu le ferirai il calcagno.”",
+   "dopo": "E porrò inimicizia tra te e la donna, e tra la tua discendenza e la sua; egli ti schiaccerà la testa e tu gli ferirai il calcagno.”",
+   "perche": "Nell'ebraico chi viene ferito al calcagno è il discendente della donna (maschile), non la donna: un solo pronome cambia il senso di uno dei versetti più letti della Genesi.",
+   "file": "testo/01-genesi.json"
+  },
+  {
+   "ref": "19:46:2",
+   "libro": "Salmi",
+   "dove": "Salmi 46,2",
+   "tipo": "Fedeltà all'originale",
+   "prima": "Perciò non temeremo, anche se la terra trema\nE i monti cadono nelle profondità del mare;",
+   "dopo": "Perciò non temeremo, anche se la terra trema\nE i monti vacillano nel cuore del mare;",
+   "perche": "Il verbo ebraico (mot) significa vacillare, barcollare: i monti non «cadono», tremano nel cuore del mare.",
+   "file": "testo/19-salmi.json"
+  },
+  {
+   "ref": "2:28:31",
+   "libro": "Esodo",
+   "dove": "Esodo 28,31",
+   "tipo": "Fedeltà all'originale",
+   "prima": "“Fai la tunica dell'efod interamente di stoffa violetta,",
+   "dopo": "“Fai il manto dell'efod interamente di stoffa violetta,",
+   "perche": "Il capo è il manto (me'il), come nell'elenco al v. 4: «tunica» indica un'altra veste del sacerdote.",
+   "file": "testo/02-esodo.json"
+  },
+  {
+   "ref": "40:6:13",
+   "libro": "Matteo",
+   "dove": "Matteo 6,13",
+   "tipo": "Manoscritti",
+   "prima": "e non ci indurre in tentazione,\nma liberaci dal male.’\nPerché tuo è il regno, la potenza e la gloria,\nnei secoli. Amen",
+   "dopo": "e non ci indurre in tentazione,\nma liberaci dal maligno.’",
+   "nota": "Altri traducono «dal male». Alcuni manoscritti più tardi aggiungono: «Perché tuo è il regno, la potenza e la gloria nei secoli. Amen».",
+   "perche": "La dossologia «Perché tuo è il regno…» manca nei manoscritti più antichi: è un'aggiunta liturgica. Resta in nota, e la nota ricorda anche la resa «dal male».",
+   "file": "testo/40-matteo.json"
+  },
+  {
+   "ref": "42:11:4",
+   "libro": "Luca",
+   "dove": "Luca 11,4",
+   "tipo": "Manoscritti",
+   "prima": "E perdonaci i nostri peccati,\npoiché anche noi perdoniamo a chiunque ci offenda.\nE non ci indurre in tentazione,\nma liberaci dal male.’”",
+   "dopo": "E perdonaci i nostri peccati,\npoiché anche noi perdoniamo a chiunque ci offenda.\nE non ci indurre in tentazione.’”",
+   "nota": "Alcuni manoscritti, armonizzando con Mt 6:13, aggiungono: «ma liberaci dal male».",
+   "perche": "Nel Padre nostro di Luca i manoscritti più antichi si fermano a «non ci indurre in tentazione»: il resto viene da Matteo.",
+   "file": "testo/42-luca.json"
+  },
+  {
+   "ref": "41:16:9",
+   "libro": "Marco",
+   "dove": "Marco 16,9",
+   "tipo": "Manoscritti",
+   "prima": "[I manoscritti più antichi e alcuni altri testimoni antichi non hanno i versetti 9–20.] Ora, dopo che fu risorto il primo giorno della settimana, apparve prima a Maria Maddalena, dalla quale aveva cacciato sette demoni.",
+   "dopo": "[Ora, dopo che fu risorto il primo giorno della settimana, apparve prima a Maria Maddalena, dalla quale aveva cacciato sette demoni.]",
+   "nota": "I vv. 9-20 mancano nei manoscritti più antichi, che terminano il vangelo al v. 8; la maggior parte dei manoscritti li ha.",
+   "perche": "La fine lunga di Marco (16:9-20) manca nei manoscritti più antichi: resta nel testo, tra parentesi quadre, con una nota. Prima la spiegazione era finita dentro il versetto.",
+   "file": "testo/41-marco.json"
+  },
+  {
+   "ref": "43:8:1",
+   "libro": "Giovanni",
+   "dove": "Giovanni 8,1",
+   "tipo": "Manoscritti",
+   "prima": "Alcuni manoscritti antichi non hanno Giovanni 8:1 - 8:11 in questa posizione, ma lo includono\nGesù andò al Monte degli Ulivi.",
+   "dopo": "[Gesù andò al Monte degli Ulivi.]",
+   "perche": "Anche qui una spiegazione sui manoscritti era stata copiata nel testo biblico. Ora il brano dell'adultera è tra quadre e la spiegazione sta nella nota.",
+   "file": "testo/43-giovanni.json"
+  },
+  {
+   "ref": "19:105:28",
+   "libro": "Salmi",
+   "dove": "Salmi 105,28",
+   "tipo": "Manoscritti",
+   "prima": "Mandò tenebre e fece buio;\nE non sfidarono i Suoi comandi.",
+   "dopo": "Mandò tenebre e fece buio,\nEd essi non si ribellarono alla Sua parola.",
+   "nota": "Nota testuale: Il testo ebraico masoretico dice «ed essi non si ribellarono alla Sua parola»: il soggetto sono probabilmente Mosè e Aronne (vv. 26-27), che eseguirono l'ordine di Dio. L'antica traduzione greca dei Settanta omette la negazione e legge «e si ribellarono alle Sue parole», riferito agli Egiziani.",
+   "perche": "Il testo ebraico ha la negazione, la traduzione greca dei Settanta no. La NTA segue l'ebraico e dà conto dell'altra lettura in nota.",
+   "file": "testo/19-salmi.json"
+  },
+  {
+   "ref": "50:4:6",
+   "libro": "Filippesi",
+   "dove": "Filippesi 4,6",
+   "tipo": "Italiano più naturale",
+   "prima": "Non siate in ansia per nulla, ma in ogni situazione, con preghiera e supplica con ringraziamento, presentate le vostre richieste a Dio.",
+   "dopo": "Non siate in ansia per nulla, ma in ogni situazione, con preghiera e supplica unite al ringraziamento, presentate le vostre richieste a Dio.",
+   "perche": "Due «con» di fila appesantivano la frase. Il greco dice che preghiera e supplica vanno insieme al ringraziamento, e così ora si legge.",
+   "file": "testo/50-filippesi.json"
+  },
+  {
+   "ref": "1:17:5",
+   "libro": "Genesi",
+   "dove": "Genesi 17,5",
+   "tipo": "Scelte per tutta la Bibbia",
+   "prima": "Non ti chiamerai più Abramo, ma il tuo nome sarà Abrahamo, perché ti ho fatto padre di molte nazioni.",
+   "dopo": "Non ti chiamerai più Abramo, ma il tuo nome sarà Abraamo, perché ti ho fatto padre di molte nazioni.",
+   "perche": "Il testo alternava Abram, Abramo e Abrahamo. Ora segue l'ebraico: Abramo fino a qui, Abraamo da quando Dio gli cambia il nome, e così in tutta la Bibbia.",
+   "file": "testo/01-genesi.json"
+  },
+  {
+   "ref": "3:3:1",
+   "libro": "Levitico",
+   "dove": "Levitico 3,1",
+   "tipo": "Scelte per tutta la Bibbia",
+   "prima": "‘Se la tua offerta è un sacrificio di offerte di pace, e proviene dal bestiame, sia maschio che femmina, la presenterai senza difetto davanti al Signore.",
+   "dopo": "‘Se la tua offerta è un sacrificio di comunione, e proviene dal bestiame, sia maschio che femmina, la presenterai senza difetto davanti al Signore.",
+   "perche": "Lo zevach shelamim è un sacrificio che si conclude con un pasto condiviso: «sacrificio di comunione» lo dice meglio di «offerte di pace», e ora è lo stesso termine da Esodo a Ezechiele.",
+   "file": "testo/03-levitico.json"
+  }
+ ]
+}

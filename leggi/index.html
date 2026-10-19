@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Leggi la NTA</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/nta-icona-192.png">
+<meta property="og:image" content="https://nta-nuova-traduzione-aperta.github.io/assets/nta-logo-1200.png">
+<meta property="og:title" content="Leggi la NTA · Nuova Traduzione Aperta">
+<meta name="description" content="Leggi online la NTA, Nuova Traduzione Aperta: tutti i 66 libri, con titoli di sezione, note e il testo ebraico e greco parola per parola.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=Noto+Serif+Hebrew&display=swap">
+<link rel="stylesheet" href="../assets/nta.css">
+<script src="../assets/nta.js"></script>
+</head>
+<body>
+<div class="sheet">
+
+<header class="mast pad">
+  <a class="brand" href="../" aria-label="NTA, Nuova Traduzione Aperta, home">
+    <img class="on-light" src="../assets/nta-logo-inchiostro.svg" alt="NTA" width="66" height="30">
+    <img class="on-dark" src="../assets/nta-logo-su-scuro.svg" alt="NTA" width="66" height="30">
+  </a>
+  <nav aria-label="Sezioni"><ul>
+    <li><a href="./" aria-current="page">Leggi</a></li>
+    <li><a href="../revisione/">Revisione 26.11</a></li>
+    <li><a href="../modifiche/">Modifiche</a></li>
+    <li><a href="../usa/">Usala</a></li>
+  </ul></nav>
+  <div class="end">
+    <a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia">GitHub</a>
+    <button class="round" type="button" data-tema aria-label="Cambia tema chiaro o scuro">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="reader-bar pad">
+    <button class="chip dark" type="button" id="scegli" aria-expanded="false" aria-controls="picker">Scegli il libro <span aria-hidden="true">▾</span></button>
+    <button class="chip" type="button" id="orig" aria-pressed="false" title="Tocca un versetto per vedere l'ebraico o il greco">Originale</button>
+    <span class="sp"></span>
+    <button class="chip" type="button" id="meno" aria-label="Testo più piccolo">A−</button>
+    <button class="chip" type="button" id="piu" aria-label="Testo più grande">A+</button>
+  </div>
+  <div class="picker pad" id="picker" hidden></div>
+
+  <article class="page pad" id="page" aria-live="polite">
+    <p class="wait">Caricamento…</p>
+  </article>
+</main>
+
+<footer class="pad">
+  <div>
+    <h4>Il testo</h4>
+    <p>NTA — Nuova Traduzione Aperta, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it">CC BY-SA 4.0</a>, derivata dalla <a href="https://openbible.uk">Open Translation Bible</a>, edizione italiana.</p>
+    <p>È il testo in revisione, letto in diretta dal repo <a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia">bibbia</a>.</p>
+  </div>
+  <div>
+    <h4>Originale</h4>
+    <p>Westminster Leningrad Codex per l'ebraico e Nestle 1904 per il greco (pubblico dominio), con gloss italiane.</p>
+    <p>Hai trovato un errore? <a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia/issues">Segnalalo</a>.</p>
+  </div>
+</footer>
+
+</div>
+<script>
+(function () {
+  var RAW = 'https://raw.githubusercontent.com/NTA-nuova-traduzione-aperta/bibbia/main/';
+  var page = document.getElementById('page'), picker = document.getElementById('picker');
+  var btnScegli = document.getElementById('scegli'), btnOrig = document.getElementById('orig');
+  var libri = [], cache = {}, attuale = null, conOriginale = false;
+  var STATO = {
+    'rivisto': 'Libro rivisto sui testi originali per la Revisione 26.11.',
+    'in-revisione': 'Libro in revisione per la 26.11: qui c’è ancora il testo di prima.',
+    'da-fare': 'Libro non ancora rivisto: è il testo della Open Translation Bible, con le prime correzioni.'
+  };
+
+  function salva(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function leggi(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function json(file) {
+    if (!cache[file]) cache[file] = fetch(RAW + file).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+    return cache[file];
+  }
+  function libro(n) { return libri.find(function (l) { return l.n === n; }); }
+
+  // dimensione del testo
+  var fs = parseFloat(leggi('nta-fs')) || 1.18;
+  function setFs(x) { fs = Math.min(1.7, Math.max(.95, x)); page.style.setProperty('--fs', fs + 'rem'); salva('nta-fs', fs); }
+  setFs(fs);
+  document.getElementById('meno').onclick = function () { setFs(fs - .08); };
+  document.getElementById('piu').onclick = function () { setFs(fs + .08); };
+
+  btnOrig.onclick = function () {
+    conOriginale = !conOriginale;
+    btnOrig.setAttribute('aria-pressed', conOriginale);
+    if (!conOriginale) page.querySelectorAll('.orig').forEach(function (o) { o.remove(); });
+  };
+
+  // scelta di libro e capitolo
+  btnScegli.onclick = function () { picker.hidden ? apriLibri() : chiudi(); };
+  function chiudi() { picker.hidden = true; btnScegli.setAttribute('aria-expanded', 'false'); }
+  function apriLibri() {
+    picker.innerHTML = '';
+    [['AT', 'Antico Testamento'], ['NT', 'Nuovo Testamento']].forEach(function (g) {
+      var h = document.createElement('h3'); h.className = 'label'; h.style.margin = '6px 0 10px'; h.textContent = g[1];
+      var cells = document.createElement('div'); cells.className = 'cells'; cells.style.marginBottom = '14px';
+      libri.filter(function (l) { return l.testamento === g[0]; }).forEach(function (l) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'cell s-' + l.stato; b.textContent = l.abbr; b.title = l.nome;
+        if (attuale && attuale.b === l.n) b.setAttribute('aria-current', 'true');
+        b.onclick = function () { l.capitoli === 1 ? vai(l.n, 1) : apriCapitoli(l); };
+        cells.appendChild(b);
+      });
+      picker.appendChild(h); picker.appendChild(cells);
+    });
+    picker.hidden = false; btnScegli.setAttribute('aria-expanded', 'true');
+  }
+  function apriCapitoli(l) {
+    picker.innerHTML = '';
+    var top = document.createElement('div'); top.style.cssText = 'display:flex;gap:12px;align-items:center;margin-bottom:12px';
+    var back = document.createElement('button'); back.type = 'button'; back.className = 'chip'; back.textContent = '← Libri'; back.onclick = apriLibri;
+    var t = document.createElement('h3'); t.style.fontSize = '1.3rem'; t.textContent = l.nome;
+    top.appendChild(back); top.appendChild(t); picker.appendChild(top);
+    var cells = document.createElement('div'); cells.className = 'cells';
+    for (var c = 1; c <= l.capitoli; c++) (function (c) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'cell'; b.textContent = c;
+      if (attuale && attuale.b === l.n && attuale.c === c) b.setAttribute('aria-current', 'true');
+      b.onclick = function () { vai(l.n, c); };
+      cells.appendChild(b);
+    })(c);
+    picker.appendChild(cells);
+  }
+
+  function vai(b, c, v) {
+    chiudi();
+    var h = '#' + b + '-' + c + (v ? '-' + v : '');
+    if (location.hash !== h) location.hash = h; else mostra(b, c, v);
+  }
+
+  function mostra(b, c, v) {
+    var l = libro(b);
+    if (!l) { l = libro(43); b = 43; c = 1; }
+    c = Math.min(Math.max(1, c), l.capitoli);
+    attuale = { b: b, c: c };
+    salva('nta-pos', b + '-' + c);
+    btnScegli.firstChild.textContent = l.nome + ' ' + c + ' ';
+    document.title = l.nome + ' ' + c + ' · NTA';
+    page.innerHTML = '<p class="wait">Caricamento di ' + esc(l.nome) + ' ' + c + '…</p>';
+    json(l.file).then(function (d) {
+      if (!attuale || attuale.b !== b || attuale.c !== c) return;
+      var vv = d.verses.filter(function (x) { return x.c === c; });
+      var html = '<h1>' + esc(l.nome) + ' ' + c + '</h1><p class="state">' + STATO[l.stato] + '</p><div class="txt"><p>';
+      var note = [], aperto = true;
+      vv.forEach(function (x, i) {
+        if (x.t) { html += '</p><h2>' + esc(x.t) + '</h2><p>'; }
+        else if (x.p && i > 0) { html += '</p><p>'; }
+        var righe = x.x.split('\n');
+        var sup = '<sup>' + x.v + '</sup>', fn = '';
+        if (x.n) { note.push(x); fn = '<a class="fn" href="#nota-' + x.v + '" id="rif-' + x.v + '" aria-label="Nota">' + note.length + '</a>'; }
+        var corpo = righe.length > 1
+          ? righe.map(function (r, k) { return '<span class="poem">' + (k ? '' : sup) + esc(r) + (k === righe.length - 1 ? fn : '') + '</span>'; }).join('')
+          : sup + esc(x.x) + fn;
+        html += '<span class="v" id="v' + x.v + '" data-v="' + x.v + '">' + corpo + '</span> ';
+      });
+      html += '</p></div>';
+      if (note.length) html += '<div class="notes">' + note.map(function (x, i) {
+        return '<p id="nota-' + x.v + '"><a href="#rif-' + x.v + '">' + (i + 1) + '</a> · ' + c + ',' + x.v + ' — ' + esc(x.n) + '</p>';
+      }).join('') + '</div>';
+      html += '<nav class="pager" aria-label="Capitoli"><button class="chip" type="button" data-p="-1">← Precedente</button><button class="chip" type="button" data-p="1">Successivo →</button></nav>';
+      page.innerHTML = html;
+      var prec = vicino(-1), succ = vicino(1);
+      page.querySelector('[data-p="-1"]').disabled = !prec;
+      page.querySelector('[data-p="1"]').disabled = !succ;
+      if (v) { var el = document.getElementById('v' + v); if (el) { el.classList.add('on'); el.scrollIntoView({ block: 'center' }); } }
+      else window.scrollTo({ top: page.offsetTop - 60 });
+    }).catch(function () {
+      page.innerHTML = '<p class="wait">Non riesco a caricare ' + esc(l.nome) + '. Controlla la connessione, oppure leggilo <a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia/blob/main/' + l.file + '">su GitHub</a>.</p>';
+    });
+  }
+
+  function vicino(d) {
+    var l = libro(attuale.b), c = attuale.c + d;
+    if (c >= 1 && c <= l.capitoli) return [l.n, c];
+    var a = libro(attuale.b + d);
+    return a ? [a.n, d > 0 ? 1 : a.capitoli] : null;
+  }
+
+  page.addEventListener('click', function (e) {
+    var p = e.target.closest('[data-p]');
+    if (p) { var x = vicino(+p.dataset.p); if (x) vai(x[0], x[1]); return; }
+    if (e.target.closest('a, .orig')) return;
+    var v = e.target.closest('.v');
+    if (!v) return;
+    page.querySelectorAll('.v.on').forEach(function (o) { if (o !== v) o.classList.remove('on'); });
+    v.classList.toggle('on');
+    history.replaceState(null, '', '#' + attuale.b + '-' + attuale.c + '-' + v.dataset.v);
+    if (conOriginale) originale(v);
+  });
+
+  function originale(span) {
+    var gia = span.querySelector('.orig');
+    if (gia) { gia.remove(); return; }
+    var l = libro(attuale.b), c = attuale.c, n = +span.dataset.v;
+    var box = document.createElement('span'); box.className = 'orig'; box.textContent = 'Caricamento dell’originale…';
+    span.appendChild(box);
+    json(l.file.replace('testo/', 'interlineare/')).then(function (d) {
+      var o = d.verses.find(function (x) { return x.c === c && x.v === n; });
+      if (!o) { box.textContent = 'Per questo versetto non c’è il testo originale.'; return; }
+      var tok = o.text.split(' ');
+      box.innerHTML = '<span class="words"' + (o.lang === 'he' ? ' dir="rtl" lang="he"' : ' lang="grc"') + '>' +
+        o.words.map(function (w, i) {
+          return '<span class="w"><b>' + esc(tok[i] || '') + '</b><span>' + esc(w.it || w.en || '') + '</span><small>' + esc(w.s || '') + '</small></span>';
+        }).join('') + '</span>' + (o.tr ? '<span class="tr" style="display:block">' + esc(o.tr) + '</span>' : '');
+    }).catch(function () { box.textContent = 'Non riesco a caricare l’originale.'; });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.target.closest('input, textarea') || e.altKey || e.ctrlKey || e.metaKey || !attuale) return;
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { var x = vicino(e.key === 'ArrowLeft' ? -1 : 1); if (x) vai(x[0], x[1]); }
+  });
+
+  function daHash() {
+    var m = /^#(\d+)-(\d+)(?:-(\d+))?$/.exec(location.hash) || /^(\d+)-(\d+)$/.exec(leggi('nta-pos') || '');
+    if (m) mostra(+m[1], +m[2], m[3] ? +m[3] : null); else mostra(43, 1);
+  }
+
+  NTA.stato('../').then(function (s) {
+    libri = s.libri;
+    window.addEventListener('hashchange', daHash);
+    daHash();
+  }).catch(function () {
+    page.innerHTML = '<p class="wait">Non riesco a caricare l’elenco dei libri.</p>';
+  });
+})();
+</script>
+</body>
+</html>
