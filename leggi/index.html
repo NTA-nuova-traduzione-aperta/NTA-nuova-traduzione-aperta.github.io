@@ -40,11 +40,12 @@
 <main>
   <div class="reader-bar pad">
     <button class="chip dark" type="button" id="scegli" aria-expanded="false" aria-controls="picker">Scegli il libro <span aria-hidden="true">▾</span></button>
-    <button class="chip" type="button" id="orig" aria-pressed="false" title="Tocca un versetto per vedere l'ebraico o il greco">Originale</button>
+    <button class="chip" type="button" id="orig" aria-pressed="false" title="Tocca un versetto per vedere l'ebraico o il greco parola per parola">Interlineare</button>
     <span class="sp"></span>
     <button class="chip" type="button" id="meno" aria-label="Testo più piccolo">A−</button>
     <button class="chip" type="button" id="piu" aria-label="Testo più grande">A+</button>
   </div>
+  <p class="pad hint" id="hint" hidden>Interlineare attivo: tocca un versetto per vedere l'ebraico o il greco parola per parola, con il significato in italiano.</p>
   <div class="picker pad" id="picker" hidden></div>
 
   <article class="page pad" id="page" aria-live="polite">
@@ -98,6 +99,8 @@
   btnOrig.onclick = function () {
     conOriginale = !conOriginale;
     btnOrig.setAttribute('aria-pressed', conOriginale);
+    var hint = document.getElementById('hint');
+    if (hint) hint.hidden = !conOriginale;
     if (!conOriginale) page.querySelectorAll('.orig').forEach(function (o) { o.remove(); });
   };
 

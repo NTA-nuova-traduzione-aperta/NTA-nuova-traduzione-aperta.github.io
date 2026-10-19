@@ -278,3 +278,5 @@ th { font-weight: 500; color: var(--muted); font-size: .8rem; letter-spacing: .0
   .reader-bar #scegli { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 }
 #elenco code { white-space: nowrap; }
+.hint { margin: 0; padding-block: 10px; font-size: .9rem; color: var(--muted); border-bottom: 1px solid var(--line); }
+.hint[hidden] { display: none; }
