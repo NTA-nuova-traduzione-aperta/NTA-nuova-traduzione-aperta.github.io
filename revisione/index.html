@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Revisione 26.11 · NTA</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/nta-icona-192.png">
+<meta property="og:image" content="https://nta-nuova-traduzione-aperta.github.io/assets/nta-logo-1200.png">
+<meta property="og:title" content="Revisione 26.11 · Nuova Traduzione Aperta">
+<meta name="description" content="A che punto è la revisione 26.11 della NTA, la Nuova Traduzione Aperta: libri rivisti, in revisione e da fare, con i versetti e i titoli cambiati in ciascun libro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="../assets/nta.css">
+<script src="../assets/nta.js"></script>
+</head>
+<body>
+<div class="sheet">
+
+<header class="mast pad">
+  <a class="brand" href="../" aria-label="NTA, Nuova Traduzione Aperta, home">
+    <img class="on-light" src="../assets/nta-logo-inchiostro.svg" alt="NTA" width="66" height="30">
+    <img class="on-dark" src="../assets/nta-logo-su-scuro.svg" alt="NTA" width="66" height="30">
+  </a>
+  <nav aria-label="Sezioni"><ul>
+    <li><a href="./" aria-current="page">Revisione 26.11</a></li>
+    <li><a href="../#progetto">Il progetto</a></li>
+    <li><a href="../#scarica">Scarica</a></li>
+    <li><a href="../#partecipa">Partecipa</a></li>
+  </ul></nav>
+  <div class="end">
+    <a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia">GitHub</a>
+    <button class="round" type="button" data-tema aria-label="Cambia tema chiaro o scuro">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="pad" style="padding-block:20px 48px" aria-labelledby="titolo">
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))">
+      <div class="tile" style="display:flex;flex-direction:column;justify-content:space-between;gap:28px">
+        <h1 id="titolo" style="font-size:clamp(3rem,8vw,6rem);line-height:.95;letter-spacing:-.02em">Revisione <span data-s="revisione">26.11</span></h1>
+        <p class="lead">È il testo della NTA che pubblicheremo a <span data-s="obiettivo">novembre 2026</span>: il nome è l'anno e il mese di uscita. Qui vedi quanta parte è già rivista sui testi originali.</p>
+      </div>
+      <div class="tile solid" style="display:flex;flex-direction:column;justify-content:space-between;gap:28px">
+        <p class="caps">Versetti nei<br>libri già rivisti</p>
+        <div>
+          <p class="big" data-s="percento">43%</p>
+          <p style="margin-top:10px;opacity:.75"><span data-s="versettiRivisti">13.386</span> su <span data-s="versetti">31.104</span> · aggiornato al <span data-s="aggiornato">19 ottobre 2026</span></p>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:26px">
+      <div class="bar" id="bar" role="img" aria-label="Avanzamento della revisione"></div>
+      <div class="legend"><span><i class="s-rivisto"></i><span data-s="rivisti">31</span> rivisti</span><span><i class="s-in-revisione"></i><span data-s="inRevisione">1</span> in revisione</span><span><i></i><span data-s="daFare">34</span> da fare</span></div>
+    </div>
+    <div class="nums">
+      <div class="tile white"><span class="label">Versetti corretti</span><b data-s="cambiati">4.440</b></div>
+      <div class="tile white"><span class="label">Titoli di sezione nuovi o rivisti</span><b data-s="titoli">1.733</b></div>
+    </div>
+  </section>
+
+  <section class="section pad" aria-labelledby="t-libri">
+    <div class="head">
+      <h2 id="t-libri">Libro per libro</h2>
+      <p>I numeri contano i versetti cambiati rispetto alla Open Translation Bible da cui la NTA deriva. Ogni modifica, con il suo motivo, è su GitHub.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filtra i libri">
+      <button type="button" data-f="tutti" aria-pressed="true">Tutti</button>
+      <button type="button" data-f="AT" aria-pressed="false">Antico Testamento</button>
+      <button type="button" data-f="NT" aria-pressed="false">Nuovo Testamento</button>
+      <button type="button" data-f="rivisto" aria-pressed="false">Rivisti</button>
+      <button type="button" data-f="in-revisione" aria-pressed="false">In revisione</button>
+      <button type="button" data-f="da-fare" aria-pressed="false">Da fare</button>
+    </div>
+    <div class="books" id="books"><p class="wait">L'elenco dei libri si carica da <a href="../stato.json">stato.json</a>.</p></div>
+  </section>
+
+  <section class="section pad" aria-labelledby="t-come">
+    <div class="head">
+      <h2 id="t-come">Come si rivede un libro</h2>
+      <p>Lo stesso percorso per ogni libro, dalla proposta alla pubblicazione.</p>
+    </div>
+    <div class="grid steps">
+      <div class="tile white"><h3>Il confronto</h3><p>Ogni versetto si legge accanto all'ebraico o al greco, parola per parola, e alla Berean Standard Bible.</p></div>
+      <div class="tile white"><h3>Le proposte</h3><p>Dove l'italiano è poco fedele o poco naturale si prepara una proposta, anche con l'aiuto dell'intelligenza artificiale, sempre con il motivo scritto.</p></div>
+      <div class="tile white"><h3>La revisione umana</h3><p>Una persona accetta, corregge o rifiuta ogni proposta. Le scelte che valgono per tutta la Bibbia, come i nomi propri, si decidono una volta e si applicano ovunque.</p></div>
+      <div class="tile solid"><h3>La pubblicazione</h3><p>Il testo rivisto va nel repo pubblico, con lo storico delle modifiche, e arriva nelle app.</p></div>
+    </div>
+    <p style="margin-top:26px">Vuoi aiutare con uno dei libri da fare? <a href="https://github.com/NTA-nuova-traduzione-aperta/bibbia/issues">Scrivici su GitHub</a>.</p>
+  </section>
+</main>
+
+<footer class="pad">
+  <div>
+    <h4>Licenza</h4>
+    <p>Testo della NTA: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it">CC BY-SA 4.0</a>.</p>
+    <p>Deriva dalla <a href="https://openbible.uk">Open Translation Bible</a>, edizione italiana, con la stessa licenza.</p>
+  </div>
+  <div>
+    <h4>I dati di questa pagina</h4>
+    <p>Generati dal testo della NTA a ogni aggiornamento: <a href="../stato.json">stato.json</a>.</p>
+    <p>NTA · Nuova Traduzione Aperta</p>
+  </div>
+</footer>
+
+</div>
+<script>
+(function () {
+  var libri = [], filtro = 'tutti';
+  var box = document.getElementById('books');
+
+  function render() {
+    box.innerHTML = '';
+    libri.filter(function (l) {
+      return filtro === 'tutti' || l.testamento === filtro || l.stato === filtro;
+    }).forEach(function (l) {
+      var art = document.createElement('article');
+      art.className = 'tile ' + (l.stato === 'da-fare' ? '' : 'white ') + 'book';
+      art.id = 'libro-' + l.n;
+      var quota = l.versetti ? Math.min(100, (l.cambiati / l.versetti) * 100) : 0;
+      art.innerHTML =
+        '<div class="t"><h3></h3><span class="badge s-' + l.stato + '"></span></div>' +
+        '<dl><div><dt>Versetti</dt><dd>' + NTA.num(l.versetti) + '</dd></div>' +
+        '<div><dt>Cambiati</dt><dd>' + NTA.num(l.cambiati) + '</dd></div>' +
+        '<div><dt>Titoli</dt><dd>' + NTA.num(l.titoli) + '</dd></div></dl>' +
+        '<div class="meter" title="Quota di versetti cambiati"><span style="width:' + quota + '%"></span></div>' +
+        '<a class="h" href="https://github.com/NTA-nuova-traduzione-aperta/bibbia/commits/main/' + l.file + '">Storico delle modifiche ↗</a>';
+      art.querySelector('h3').innerHTML = '';
+      art.querySelector('h3').append(l.nome + ' ');
+      var ab = document.createElement('span'); ab.className = 'ab'; ab.textContent = l.abbr;
+      art.querySelector('h3').appendChild(ab);
+      art.querySelector('.badge').textContent = NTA.STATI[l.stato];
+      if (l.nota) { var n = document.createElement('p'); n.className = 'ab'; n.textContent = l.nota.charAt(0).toUpperCase() + l.nota.slice(1); art.querySelector('.t').after(n); n.style.marginTop = '-8px'; }
+      box.appendChild(art);
+    });
+  }
+
+  document.querySelector('.filters').addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    filtro = b.dataset.f;
+    this.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+    render();
+  });
+
+  NTA.stato('../').then(function (s) {
+    libri = s.libri;
+    NTA.fill(s);
+    NTA.bar(document.getElementById('bar'), s);
+    render();
+    if (location.hash) { var el = document.querySelector(location.hash); if (el) el.scrollIntoView(); }
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>
