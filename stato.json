@@ -1,17 +1,17 @@
 {
  "revisione": "26.11",
  "obiettivo": "novembre 2026",
- "aggiornato": "2026-10-19",
+ "aggiornato": "2026-10-20",
  "repo": "https://github.com/NTA-nuova-traduzione-aperta/bibbia",
  "totali": {
   "libri": 66,
-  "rivisti": 31,
-  "inRevisione": 5,
+  "rivisti": 34,
+  "inRevisione": 2,
   "daFare": 30,
   "versetti": 31104,
-  "versettiRivisti": 13386,
-  "cambiati": 4440,
-  "titoli": 1733
+  "versettiRivisti": 16552,
+  "cambiati": 5791,
+  "titoli": 2116
  },
  "libri": [
   {
@@ -69,9 +69,9 @@
    "testamento": "AT",
    "capitoli": 34,
    "versetti": 959,
-   "stato": "in-revisione",
-   "cambiati": 17,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 412,
+   "titoli": 126,
    "file": "testo/05-deuteronomio.json"
   },
   {
@@ -249,9 +249,9 @@
    "testamento": "AT",
    "capitoli": 31,
    "versetti": 915,
-   "stato": "in-revisione",
-   "cambiati": 1,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 311,
+   "titoli": 96,
    "file": "testo/20-proverbi.json"
   },
   {
@@ -286,9 +286,9 @@
    "testamento": "AT",
    "capitoli": 66,
    "versetti": 1292,
-   "stato": "in-revisione",
-   "cambiati": 2,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 648,
+   "titoli": 161,
    "file": "testo/23-isaia.json"
   },
   {
