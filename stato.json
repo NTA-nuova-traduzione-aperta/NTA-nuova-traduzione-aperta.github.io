@@ -5,13 +5,13 @@
  "repo": "https://github.com/NTA-nuova-traduzione-aperta/bibbia",
  "totali": {
   "libri": 66,
-  "rivisti": 42,
-  "inRevisione": 13,
+  "rivisti": 48,
+  "inRevisione": 7,
   "daFare": 11,
   "versetti": 31104,
-  "versettiRivisti": 19576,
-  "cambiati": 7320,
-  "titoli": 2520
+  "versettiRivisti": 20036,
+  "cambiati": 7539,
+  "titoli": 2583
  },
  "libri": [
   {
@@ -287,7 +287,7 @@
    "capitoli": 66,
    "versetti": 1292,
    "stato": "rivisto",
-   "cambiati": 666,
+   "cambiati": 670,
    "titoli": 161,
    "file": "testo/23-isaia.json"
   },
@@ -299,7 +299,7 @@
    "capitoli": 52,
    "versetti": 1364,
    "stato": "rivisto",
-   "cambiati": 680,
+   "cambiati": 684,
    "titoli": 192,
    "file": "testo/24-geremia.json"
   },
@@ -371,7 +371,7 @@
    "capitoli": 9,
    "versetti": 146,
    "stato": "rivisto",
-   "cambiati": 73,
+   "cambiati": 76,
    "titoli": 21,
    "file": "testo/30-amos.json"
   },
@@ -418,9 +418,9 @@
    "testamento": "AT",
    "capitoli": 3,
    "versetti": 47,
-   "stato": "in-revisione",
-   "cambiati": 2,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 34,
+   "titoli": 6,
    "file": "testo/34-nahum.json"
   },
   {
@@ -430,9 +430,9 @@
    "testamento": "AT",
    "capitoli": 3,
    "versetti": 56,
-   "stato": "in-revisione",
-   "cambiati": 1,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 29,
+   "titoli": 8,
    "file": "testo/35-abacuc.json"
   },
   {
@@ -442,9 +442,9 @@
    "testamento": "AT",
    "capitoli": 3,
    "versetti": 53,
-   "stato": "in-revisione",
-   "cambiati": 2,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 34,
+   "titoli": 7,
    "file": "testo/36-sofonia.json"
   },
   {
@@ -454,9 +454,9 @@
    "testamento": "AT",
    "capitoli": 2,
    "versetti": 38,
-   "stato": "in-revisione",
-   "cambiati": 7,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 15,
+   "titoli": 5,
    "file": "testo/37-aggeo.json"
   },
   {
@@ -466,9 +466,9 @@
    "testamento": "AT",
    "capitoli": 14,
    "versetti": 211,
-   "stato": "in-revisione",
-   "cambiati": 20,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 100,
+   "titoli": 30,
    "file": "testo/38-zaccaria.json"
   },
   {
@@ -478,9 +478,9 @@
    "testamento": "AT",
    "capitoli": 4,
    "versetti": 55,
-   "stato": "in-revisione",
-   "cambiati": 8,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 36,
+   "titoli": 7,
    "file": "testo/39-malachia.json"
   },
   {
