@@ -1,17 +1,17 @@
 {
  "revisione": "26.11",
  "obiettivo": "novembre 2026",
- "aggiornato": "2026-10-22",
+ "aggiornato": "2026-10-24",
  "repo": "https://github.com/NTA-nuova-traduzione-aperta/bibbia",
  "totali": {
   "libri": 66,
-  "rivisti": 37,
-  "inRevisione": 11,
-  "daFare": 18,
+  "rivisti": 42,
+  "inRevisione": 13,
+  "daFare": 11,
   "versetti": 31104,
-  "versettiRivisti": 19059,
-  "cambiati": 6908,
-  "titoli": 2451
+  "versettiRivisti": 19576,
+  "cambiati": 7320,
+  "titoli": 2520
  },
  "libri": [
   {
@@ -105,7 +105,7 @@
    "testamento": "AT",
    "capitoli": 4,
    "versetti": 85,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 0,
    "titoli": 0,
    "file": "testo/08-rut.json"
@@ -118,7 +118,7 @@
    "capitoli": 31,
    "versetti": 811,
    "stato": "da-fare",
-   "cambiati": 6,
+   "cambiati": 11,
    "titoli": 0,
    "file": "testo/09-1-samuele.json"
   },
@@ -130,7 +130,7 @@
    "capitoli": 24,
    "versetti": 694,
    "stato": "da-fare",
-   "cambiati": 7,
+   "cambiati": 12,
    "titoli": 0,
    "file": "testo/10-2-samuele.json"
   },
@@ -142,7 +142,7 @@
    "capitoli": 22,
    "versetti": 817,
    "stato": "da-fare",
-   "cambiati": 15,
+   "cambiati": 18,
    "titoli": 0,
    "file": "testo/11-1-re.json"
   },
@@ -154,7 +154,7 @@
    "capitoli": 25,
    "versetti": 719,
    "stato": "da-fare",
-   "cambiati": 9,
+   "cambiati": 21,
    "titoli": 0,
    "file": "testo/12-2-re.json"
   },
@@ -166,7 +166,7 @@
    "capitoli": 29,
    "versetti": 943,
    "stato": "da-fare",
-   "cambiati": 24,
+   "cambiati": 27,
    "titoli": 0,
    "file": "testo/13-1-cronache.json"
   },
@@ -178,7 +178,7 @@
    "capitoli": 36,
    "versetti": 822,
    "stato": "da-fare",
-   "cambiati": 14,
+   "cambiati": 16,
    "titoli": 0,
    "file": "testo/14-2-cronache.json"
   },
@@ -189,7 +189,7 @@
    "testamento": "AT",
    "capitoli": 10,
    "versetti": 280,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 1,
    "titoli": 0,
    "file": "testo/15-esdra.json"
@@ -201,7 +201,7 @@
    "testamento": "AT",
    "capitoli": 13,
    "versetti": 406,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 4,
    "titoli": 0,
    "file": "testo/16-neemia.json"
@@ -213,7 +213,7 @@
    "testamento": "AT",
    "capitoli": 10,
    "versetti": 167,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 2,
    "titoli": 0,
    "file": "testo/17-ester.json"
@@ -238,7 +238,7 @@
    "capitoli": 150,
    "versetti": 2460,
    "stato": "rivisto",
-   "cambiati": 681,
+   "cambiati": 689,
    "titoli": 170,
    "file": "testo/19-salmi.json"
   },
@@ -274,7 +274,7 @@
    "testamento": "AT",
    "capitoli": 8,
    "versetti": 117,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 1,
    "titoli": 0,
    "file": "testo/22-cantico-dei-cantici.json"
@@ -287,7 +287,7 @@
    "capitoli": 66,
    "versetti": 1292,
    "stato": "rivisto",
-   "cambiati": 648,
+   "cambiati": 666,
    "titoli": 161,
    "file": "testo/23-isaia.json"
   },
@@ -299,7 +299,7 @@
    "capitoli": 52,
    "versetti": 1364,
    "stato": "rivisto",
-   "cambiati": 657,
+   "cambiati": 680,
    "titoli": 192,
    "file": "testo/24-geremia.json"
   },
@@ -310,7 +310,7 @@
    "testamento": "AT",
    "capitoli": 5,
    "versetti": 154,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 0,
    "titoli": 0,
    "file": "testo/25-lamentazioni.json"
@@ -323,7 +323,7 @@
    "capitoli": 48,
    "versetti": 1273,
    "stato": "da-fare",
-   "cambiati": 18,
+   "cambiati": 19,
    "titoli": 0,
    "file": "testo/26-ezechiele.json"
   },
@@ -334,7 +334,7 @@
    "testamento": "AT",
    "capitoli": 12,
    "versetti": 357,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 0,
    "titoli": 0,
    "file": "testo/27-daniele.json"
@@ -346,9 +346,9 @@
    "testamento": "AT",
    "capitoli": 14,
    "versetti": 197,
-   "stato": "in-revisione",
-   "cambiati": 0,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 115,
+   "titoli": 25,
    "file": "testo/28-osea.json"
   },
   {
@@ -370,9 +370,9 @@
    "testamento": "AT",
    "capitoli": 9,
    "versetti": 146,
-   "stato": "in-revisione",
-   "cambiati": 2,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 73,
+   "titoli": 21,
    "file": "testo/30-amos.json"
   },
   {
@@ -382,9 +382,9 @@
    "testamento": "AT",
    "capitoli": 1,
    "versetti": 21,
-   "stato": "in-revisione",
-   "cambiati": 0,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 15,
+   "titoli": 3,
    "file": "testo/31-abdia.json"
   },
   {
@@ -394,9 +394,9 @@
    "testamento": "AT",
    "capitoli": 4,
    "versetti": 48,
-   "stato": "in-revisione",
-   "cambiati": 0,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 26,
+   "titoli": 5,
    "file": "testo/32-giona.json"
   },
   {
@@ -406,9 +406,9 @@
    "testamento": "AT",
    "capitoli": 7,
    "versetti": 105,
-   "stato": "in-revisione",
-   "cambiati": 2,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 66,
+   "titoli": 15,
    "file": "testo/33-michea.json"
   },
   {
@@ -419,7 +419,7 @@
    "capitoli": 3,
    "versetti": 47,
    "stato": "in-revisione",
-   "cambiati": 0,
+   "cambiati": 2,
    "titoli": 0,
    "file": "testo/34-nahum.json"
   },
@@ -431,7 +431,7 @@
    "capitoli": 3,
    "versetti": 56,
    "stato": "in-revisione",
-   "cambiati": 0,
+   "cambiati": 1,
    "titoli": 0,
    "file": "testo/35-abacuc.json"
   },
@@ -443,7 +443,7 @@
    "capitoli": 3,
    "versetti": 53,
    "stato": "in-revisione",
-   "cambiati": 0,
+   "cambiati": 2,
    "titoli": 0,
    "file": "testo/36-sofonia.json"
   },
@@ -455,7 +455,7 @@
    "capitoli": 2,
    "versetti": 38,
    "stato": "in-revisione",
-   "cambiati": 0,
+   "cambiati": 7,
    "titoli": 0,
    "file": "testo/37-aggeo.json"
   },
@@ -467,7 +467,7 @@
    "capitoli": 14,
    "versetti": 211,
    "stato": "in-revisione",
-   "cambiati": 0,
+   "cambiati": 20,
    "titoli": 0,
    "file": "testo/38-zaccaria.json"
   },
@@ -479,7 +479,7 @@
    "capitoli": 4,
    "versetti": 55,
    "stato": "in-revisione",
-   "cambiati": 0,
+   "cambiati": 8,
    "titoli": 0,
    "file": "testo/39-malachia.json"
   },
@@ -719,7 +719,7 @@
    "capitoli": 5,
    "versetti": 108,
    "stato": "rivisto",
-   "cambiati": 51,
+   "cambiati": 52,
    "titoli": 13,
    "file": "testo/59-giacomo.json"
   },
