@@ -1,17 +1,17 @@
 {
  "revisione": "26.11",
  "obiettivo": "novembre 2026",
- "aggiornato": "2026-10-24",
+ "aggiornato": "2026-10-26",
  "repo": "https://github.com/NTA-nuova-traduzione-aperta/bibbia",
  "totali": {
   "libri": 66,
-  "rivisti": 48,
-  "inRevisione": 7,
+  "rivisti": 51,
+  "inRevisione": 4,
   "daFare": 11,
   "versetti": 31104,
-  "versettiRivisti": 20036,
-  "cambiati": 7539,
-  "titoli": 2583
+  "versettiRivisti": 20807,
+  "cambiati": 7803,
+  "titoli": 2686
  },
  "libri": [
   {
@@ -105,9 +105,9 @@
    "testamento": "AT",
    "capitoli": 4,
    "versetti": 85,
-   "stato": "in-revisione",
-   "cambiati": 0,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 36,
+   "titoli": 12,
    "file": "testo/08-rut.json"
   },
   {
@@ -189,9 +189,9 @@
    "testamento": "AT",
    "capitoli": 10,
    "versetti": 280,
-   "stato": "in-revisione",
-   "cambiati": 1,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 91,
+   "titoli": 35,
    "file": "testo/15-esdra.json"
   },
   {
@@ -201,9 +201,9 @@
    "testamento": "AT",
    "capitoli": 13,
    "versetti": 406,
-   "stato": "in-revisione",
-   "cambiati": 4,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 142,
+   "titoli": 56,
    "file": "testo/16-neemia.json"
   },
   {
