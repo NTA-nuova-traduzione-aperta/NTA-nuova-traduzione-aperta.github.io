@@ -6,8 +6,8 @@
  "totali": {
   "libri": 66,
   "rivisti": 55,
-  "inRevisione": 0,
-  "daFare": 11,
+  "inRevisione": 4,
+  "daFare": 7,
   "versetti": 31104,
   "versettiRivisti": 21602,
   "cambiati": 8221,
@@ -81,7 +81,7 @@
    "testamento": "AT",
    "capitoli": 24,
    "versetti": 658,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 7,
    "titoli": 0,
    "file": "testo/06-giosue.json"
@@ -93,7 +93,7 @@
    "testamento": "AT",
    "capitoli": 21,
    "versetti": 618,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 2,
    "titoli": 0,
    "file": "testo/07-giudici.json"
@@ -117,7 +117,7 @@
    "testamento": "AT",
    "capitoli": 31,
    "versetti": 811,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 11,
    "titoli": 0,
    "file": "testo/09-1-samuele.json"
@@ -129,7 +129,7 @@
    "testamento": "AT",
    "capitoli": 24,
    "versetti": 694,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 12,
    "titoli": 0,
    "file": "testo/10-2-samuele.json"
