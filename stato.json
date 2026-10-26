@@ -5,13 +5,13 @@
  "repo": "https://github.com/NTA-nuova-traduzione-aperta/bibbia",
  "totali": {
   "libri": 66,
-  "rivisti": 51,
-  "inRevisione": 4,
+  "rivisti": 55,
+  "inRevisione": 0,
   "daFare": 11,
   "versetti": 31104,
-  "versettiRivisti": 20807,
-  "cambiati": 7803,
-  "titoli": 2686
+  "versettiRivisti": 21602,
+  "cambiati": 8221,
+  "titoli": 2792
  },
  "libri": [
   {
@@ -213,9 +213,9 @@
    "testamento": "AT",
    "capitoli": 10,
    "versetti": 167,
-   "stato": "in-revisione",
-   "cambiati": 2,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 71,
+   "titoli": 25,
    "file": "testo/17-ester.json"
   },
   {
@@ -274,9 +274,9 @@
    "testamento": "AT",
    "capitoli": 8,
    "versetti": 117,
-   "stato": "in-revisione",
-   "cambiati": 1,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 95,
+   "titoli": 19,
    "file": "testo/22-cantico-dei-cantici.json"
   },
   {
@@ -310,9 +310,9 @@
    "testamento": "AT",
    "capitoli": 5,
    "versetti": 154,
-   "stato": "in-revisione",
-   "cambiati": 0,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 105,
+   "titoli": 17,
    "file": "testo/25-lamentazioni.json"
   },
   {
@@ -334,9 +334,9 @@
    "testamento": "AT",
    "capitoli": 12,
    "versetti": 357,
-   "stato": "in-revisione",
-   "cambiati": 0,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 150,
+   "titoli": 45,
    "file": "testo/27-daniele.json"
   },
   {
