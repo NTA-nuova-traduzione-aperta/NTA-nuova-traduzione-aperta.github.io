@@ -1,17 +1,17 @@
 {
  "revisione": "26.11",
  "obiettivo": "novembre 2026",
- "aggiornato": "2026-10-26",
+ "aggiornato": "2026-11-01",
  "repo": "https://github.com/NTA-nuova-traduzione-aperta/bibbia",
  "totali": {
   "libri": 66,
-  "rivisti": 55,
+  "rivisti": 59,
   "inRevisione": 4,
-  "daFare": 7,
+  "daFare": 3,
   "versetti": 31104,
-  "versettiRivisti": 21602,
-  "cambiati": 8221,
-  "titoli": 2792
+  "versettiRivisti": 24383,
+  "cambiati": 9277,
+  "titoli": 3169
  },
  "libri": [
   {
@@ -81,9 +81,9 @@
    "testamento": "AT",
    "capitoli": 24,
    "versetti": 658,
-   "stato": "in-revisione",
-   "cambiati": 7,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 178,
+   "titoli": 84,
    "file": "testo/06-giosue.json"
   },
   {
@@ -93,9 +93,9 @@
    "testamento": "AT",
    "capitoli": 21,
    "versetti": 618,
-   "stato": "in-revisione",
-   "cambiati": 2,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 221,
+   "titoli": 82,
    "file": "testo/07-giudici.json"
   },
   {
@@ -117,9 +117,9 @@
    "testamento": "AT",
    "capitoli": 31,
    "versetti": 811,
-   "stato": "in-revisione",
-   "cambiati": 11,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 363,
+   "titoli": 115,
    "file": "testo/09-1-samuele.json"
   },
   {
@@ -129,9 +129,9 @@
    "testamento": "AT",
    "capitoli": 24,
    "versetti": 694,
-   "stato": "in-revisione",
-   "cambiati": 12,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 320,
+   "titoli": 96,
    "file": "testo/10-2-samuele.json"
   },
   {
@@ -141,8 +141,8 @@
    "testamento": "AT",
    "capitoli": 22,
    "versetti": 817,
-   "stato": "da-fare",
-   "cambiati": 18,
+   "stato": "in-revisione",
+   "cambiati": 21,
    "titoli": 0,
    "file": "testo/11-1-re.json"
   },
@@ -153,7 +153,7 @@
    "testamento": "AT",
    "capitoli": 25,
    "versetti": 719,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 21,
    "titoli": 0,
    "file": "testo/12-2-re.json"
@@ -165,7 +165,7 @@
    "testamento": "AT",
    "capitoli": 29,
    "versetti": 943,
-   "stato": "da-fare",
+   "stato": "in-revisione",
    "cambiati": 27,
    "titoli": 0,
    "file": "testo/13-1-cronache.json"
@@ -177,8 +177,8 @@
    "testamento": "AT",
    "capitoli": 36,
    "versetti": 822,
-   "stato": "da-fare",
-   "cambiati": 16,
+   "stato": "in-revisione",
+   "cambiati": 18,
    "titoli": 0,
    "file": "testo/14-2-cronache.json"
   },
@@ -238,7 +238,7 @@
    "capitoli": 150,
    "versetti": 2460,
    "stato": "rivisto",
-   "cambiati": 689,
+   "cambiati": 690,
    "titoli": 170,
    "file": "testo/19-salmi.json"
   },
