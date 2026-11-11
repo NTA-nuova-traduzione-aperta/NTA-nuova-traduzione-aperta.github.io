@@ -1,17 +1,17 @@
 {
  "revisione": "26.11",
  "obiettivo": "novembre 2026",
- "aggiornato": "2026-11-01",
+ "aggiornato": "2026-11-11",
  "repo": "https://github.com/NTA-nuova-traduzione-aperta/bibbia",
  "totali": {
   "libri": 66,
-  "rivisti": 59,
-  "inRevisione": 4,
+  "rivisti": 62,
+  "inRevisione": 1,
   "daFare": 3,
   "versetti": 31104,
-  "versettiRivisti": 24383,
-  "cambiati": 9277,
-  "titoli": 3169
+  "versettiRivisti": 26862,
+  "cambiati": 10143,
+  "titoli": 3564
  },
  "libri": [
   {
@@ -22,7 +22,7 @@
    "capitoli": 50,
    "versetti": 1533,
    "stato": "rivisto",
-   "cambiati": 539,
+   "cambiati": 542,
    "titoli": 199,
    "file": "testo/01-genesi.json"
   },
@@ -34,7 +34,7 @@
    "capitoli": 40,
    "versetti": 1213,
    "stato": "rivisto",
-   "cambiati": 531,
+   "cambiati": 536,
    "titoli": 152,
    "file": "testo/02-esodo.json"
   },
@@ -58,7 +58,7 @@
    "capitoli": 36,
    "versetti": 1288,
    "stato": "da-fare",
-   "cambiati": 100,
+   "cambiati": 105,
    "titoli": 0,
    "file": "testo/04-numeri.json"
   },
@@ -70,7 +70,7 @@
    "capitoli": 34,
    "versetti": 959,
    "stato": "rivisto",
-   "cambiati": 412,
+   "cambiati": 413,
    "titoli": 126,
    "file": "testo/05-deuteronomio.json"
   },
@@ -94,7 +94,7 @@
    "capitoli": 21,
    "versetti": 618,
    "stato": "rivisto",
-   "cambiati": 221,
+   "cambiati": 226,
    "titoli": 82,
    "file": "testo/07-giudici.json"
   },
@@ -106,7 +106,7 @@
    "capitoli": 4,
    "versetti": 85,
    "stato": "rivisto",
-   "cambiati": 36,
+   "cambiati": 37,
    "titoli": 12,
    "file": "testo/08-rut.json"
   },
@@ -118,7 +118,7 @@
    "capitoli": 31,
    "versetti": 811,
    "stato": "rivisto",
-   "cambiati": 363,
+   "cambiati": 395,
    "titoli": 115,
    "file": "testo/09-1-samuele.json"
   },
@@ -130,7 +130,7 @@
    "capitoli": 24,
    "versetti": 694,
    "stato": "rivisto",
-   "cambiati": 320,
+   "cambiati": 322,
    "titoli": 96,
    "file": "testo/10-2-samuele.json"
   },
@@ -141,9 +141,9 @@
    "testamento": "AT",
    "capitoli": 22,
    "versetti": 817,
-   "stato": "in-revisione",
-   "cambiati": 21,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 314,
+   "titoli": 143,
    "file": "testo/11-1-re.json"
   },
   {
@@ -153,9 +153,9 @@
    "testamento": "AT",
    "capitoli": 25,
    "versetti": 719,
-   "stato": "in-revisione",
-   "cambiati": 21,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 275,
+   "titoli": 133,
    "file": "testo/12-2-re.json"
   },
   {
@@ -165,9 +165,9 @@
    "testamento": "AT",
    "capitoli": 29,
    "versetti": 943,
-   "stato": "in-revisione",
-   "cambiati": 27,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 278,
+   "titoli": 119,
    "file": "testo/13-1-cronache.json"
   },
   {
@@ -178,7 +178,7 @@
    "capitoli": 36,
    "versetti": 822,
    "stato": "in-revisione",
-   "cambiati": 18,
+   "cambiati": 21,
    "titoli": 0,
    "file": "testo/14-2-cronache.json"
   },
@@ -190,7 +190,7 @@
    "capitoli": 10,
    "versetti": 280,
    "stato": "rivisto",
-   "cambiati": 91,
+   "cambiati": 92,
    "titoli": 35,
    "file": "testo/15-esdra.json"
   },
@@ -238,7 +238,7 @@
    "capitoli": 150,
    "versetti": 2460,
    "stato": "rivisto",
-   "cambiati": 690,
+   "cambiati": 693,
    "titoli": 170,
    "file": "testo/19-salmi.json"
   },
@@ -287,7 +287,7 @@
    "capitoli": 66,
    "versetti": 1292,
    "stato": "rivisto",
-   "cambiati": 670,
+   "cambiati": 672,
    "titoli": 161,
    "file": "testo/23-isaia.json"
   },
@@ -491,7 +491,7 @@
    "capitoli": 28,
    "versetti": 1071,
    "stato": "rivisto",
-   "cambiati": 119,
+   "cambiati": 121,
    "titoli": 180,
    "file": "testo/40-matteo.json"
   },
@@ -515,7 +515,7 @@
    "capitoli": 24,
    "versetti": 1151,
    "stato": "rivisto",
-   "cambiati": 238,
+   "cambiati": 239,
    "titoli": 190,
    "file": "testo/42-luca.json"
   },
@@ -539,7 +539,7 @@
    "capitoli": 28,
    "versetti": 1007,
    "stato": "rivisto",
-   "cambiati": 342,
+   "cambiati": 343,
    "titoli": 168,
    "file": "testo/44-atti.json"
   },
@@ -551,7 +551,7 @@
    "capitoli": 16,
    "versetti": 433,
    "stato": "rivisto",
-   "cambiati": 138,
+   "cambiati": 139,
    "titoli": 62,
    "file": "testo/45-romani.json"
   },
