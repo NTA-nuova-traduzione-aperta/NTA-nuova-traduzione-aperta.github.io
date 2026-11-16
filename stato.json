@@ -1,17 +1,17 @@
 {
  "revisione": "26.11",
  "obiettivo": "novembre 2026",
- "aggiornato": "2026-11-11",
+ "aggiornato": "2026-11-16",
  "repo": "https://github.com/NTA-nuova-traduzione-aperta/bibbia",
  "totali": {
   "libri": 66,
-  "rivisti": 62,
-  "inRevisione": 1,
+  "rivisti": 63,
+  "inRevisione": 0,
   "daFare": 3,
   "versetti": 31104,
-  "versettiRivisti": 26862,
-  "cambiati": 10143,
-  "titoli": 3564
+  "versettiRivisti": 27684,
+  "cambiati": 10456,
+  "titoli": 3678
  },
  "libri": [
   {
@@ -177,9 +177,9 @@
    "testamento": "AT",
    "capitoli": 36,
    "versetti": 822,
-   "stato": "in-revisione",
-   "cambiati": 21,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 334,
+   "titoli": 114,
    "file": "testo/14-2-cronache.json"
   },
   {
