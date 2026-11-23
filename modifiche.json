@@ -1,6 +1,6 @@
 {
- "aggiornato": "2026-11-16",
- "totale": 10456,
+ "aggiornato": "2026-11-23",
+ "totale": 13927,
  "modifiche": [
   {
    "ref": "1:1:2",
@@ -28,7 +28,7 @@
    "dove": "Salmi 46,2",
    "tipo": "Fedeltà all'originale",
    "prima": "Perciò non temeremo, anche se la terra trema\nE i monti cadono nelle profondità del mare;",
-   "dopo": "Perciò non temeremo, anche se la terra trema\nE i monti vacillano nel cuore del mare;",
+   "dopo": "Perciò non temeremo, anche se la terra trema\ne i monti vacillano nel cuore del mare;",
    "perche": "Il verbo ebraico (mot) significa vacillare, barcollare: i monti non «cadono», tremano nel cuore del mare.",
    "file": "testo/19-salmi.json"
   },
@@ -91,7 +91,7 @@
    "dove": "Salmi 105,28",
    "tipo": "Manoscritti",
    "prima": "Mandò tenebre e fece buio;\nE non sfidarono i Suoi comandi.",
-   "dopo": "Mandò tenebre e fece buio,\nEd essi non si ribellarono alla Sua parola.",
+   "dopo": "Mandò tenebre e fece buio,\ned essi non si ribellarono alla Sua parola.",
    "nota": "Nota testuale: Il testo ebraico masoretico dice «ed essi non si ribellarono alla Sua parola»: il soggetto sono probabilmente Mosè e Aronne (vv. 26-27), che eseguirono l'ordine di Dio. L'antica traduzione greca dei Settanta omette la negazione e legge «e si ribellarono alle Sue parole», riferito agli Egiziani.",
    "perche": "Il testo ebraico ha la negazione, la traduzione greca dei Settanta no. La NTA segue l'ebraico e dà conto dell'altra lettura in nota.",
    "file": "testo/19-salmi.json"

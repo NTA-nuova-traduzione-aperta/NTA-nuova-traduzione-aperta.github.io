@@ -1,17 +1,17 @@
 {
  "revisione": "26.11",
  "obiettivo": "novembre 2026",
- "aggiornato": "2026-11-16",
+ "aggiornato": "2026-11-23",
  "repo": "https://github.com/NTA-nuova-traduzione-aperta/bibbia",
  "totali": {
   "libri": 66,
-  "rivisti": 63,
+  "rivisti": 66,
   "inRevisione": 0,
-  "daFare": 3,
+  "daFare": 0,
   "versetti": 31104,
-  "versettiRivisti": 27684,
-  "cambiati": 10456,
-  "titoli": 3678
+  "versettiRivisti": 31104,
+  "cambiati": 13927,
+  "titoli": 4032
  },
  "libri": [
   {
@@ -34,7 +34,7 @@
    "capitoli": 40,
    "versetti": 1213,
    "stato": "rivisto",
-   "cambiati": 536,
+   "cambiati": 538,
    "titoli": 152,
    "file": "testo/02-esodo.json"
   },
@@ -45,9 +45,9 @@
    "testamento": "AT",
    "capitoli": 27,
    "versetti": 859,
-   "stato": "da-fare",
-   "cambiati": 64,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 341,
+   "titoli": 87,
    "file": "testo/03-levitico.json"
   },
   {
@@ -57,9 +57,9 @@
    "testamento": "AT",
    "capitoli": 36,
    "versetti": 1288,
-   "stato": "da-fare",
-   "cambiati": 105,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 473,
+   "titoli": 109,
    "file": "testo/04-numeri.json"
   },
   {
@@ -82,7 +82,7 @@
    "capitoli": 24,
    "versetti": 658,
    "stato": "rivisto",
-   "cambiati": 178,
+   "cambiati": 184,
    "titoli": 84,
    "file": "testo/06-giosue.json"
   },
@@ -94,7 +94,7 @@
    "capitoli": 21,
    "versetti": 618,
    "stato": "rivisto",
-   "cambiati": 226,
+   "cambiati": 228,
    "titoli": 82,
    "file": "testo/07-giudici.json"
   },
@@ -118,7 +118,7 @@
    "capitoli": 31,
    "versetti": 811,
    "stato": "rivisto",
-   "cambiati": 395,
+   "cambiati": 405,
    "titoli": 115,
    "file": "testo/09-1-samuele.json"
   },
@@ -130,7 +130,7 @@
    "capitoli": 24,
    "versetti": 694,
    "stato": "rivisto",
-   "cambiati": 322,
+   "cambiati": 365,
    "titoli": 96,
    "file": "testo/10-2-samuele.json"
   },
@@ -154,7 +154,7 @@
    "capitoli": 25,
    "versetti": 719,
    "stato": "rivisto",
-   "cambiati": 275,
+   "cambiati": 278,
    "titoli": 133,
    "file": "testo/12-2-re.json"
   },
@@ -166,7 +166,7 @@
    "capitoli": 29,
    "versetti": 943,
    "stato": "rivisto",
-   "cambiati": 278,
+   "cambiati": 308,
    "titoli": 119,
    "file": "testo/13-1-cronache.json"
   },
@@ -178,7 +178,7 @@
    "capitoli": 36,
    "versetti": 822,
    "stato": "rivisto",
-   "cambiati": 334,
+   "cambiati": 337,
    "titoli": 114,
    "file": "testo/14-2-cronache.json"
   },
@@ -190,7 +190,7 @@
    "capitoli": 10,
    "versetti": 280,
    "stato": "rivisto",
-   "cambiati": 92,
+   "cambiati": 93,
    "titoli": 35,
    "file": "testo/15-esdra.json"
   },
@@ -202,7 +202,7 @@
    "capitoli": 13,
    "versetti": 406,
    "stato": "rivisto",
-   "cambiati": 142,
+   "cambiati": 152,
    "titoli": 56,
    "file": "testo/16-neemia.json"
   },
@@ -226,7 +226,7 @@
    "capitoli": 42,
    "versetti": 1070,
    "stato": "rivisto",
-   "cambiati": 429,
+   "cambiati": 620,
    "titoli": 134,
    "file": "testo/18-giobbe.json"
   },
@@ -238,7 +238,7 @@
    "capitoli": 150,
    "versetti": 2460,
    "stato": "rivisto",
-   "cambiati": 693,
+   "cambiati": 2265,
    "titoli": 170,
    "file": "testo/19-salmi.json"
   },
@@ -250,7 +250,7 @@
    "capitoli": 31,
    "versetti": 915,
    "stato": "rivisto",
-   "cambiati": 311,
+   "cambiati": 335,
    "titoli": 96,
    "file": "testo/20-proverbi.json"
   },
@@ -262,9 +262,8 @@
    "capitoli": 12,
    "versetti": 222,
    "stato": "rivisto",
-   "nota": "corretto a mano",
-   "cambiati": 26,
-   "titoli": 3,
+   "cambiati": 121,
+   "titoli": 31,
    "file": "testo/21-ecclesiaste.json"
   },
   {
@@ -275,7 +274,7 @@
    "capitoli": 8,
    "versetti": 117,
    "stato": "rivisto",
-   "cambiati": 95,
+   "cambiati": 106,
    "titoli": 19,
    "file": "testo/22-cantico-dei-cantici.json"
   },
@@ -287,7 +286,7 @@
    "capitoli": 66,
    "versetti": 1292,
    "stato": "rivisto",
-   "cambiati": 672,
+   "cambiati": 685,
    "titoli": 161,
    "file": "testo/23-isaia.json"
   },
@@ -299,7 +298,7 @@
    "capitoli": 52,
    "versetti": 1364,
    "stato": "rivisto",
-   "cambiati": 684,
+   "cambiati": 695,
    "titoli": 192,
    "file": "testo/24-geremia.json"
   },
@@ -311,7 +310,7 @@
    "capitoli": 5,
    "versetti": 154,
    "stato": "rivisto",
-   "cambiati": 105,
+   "cambiati": 113,
    "titoli": 17,
    "file": "testo/25-lamentazioni.json"
   },
@@ -322,9 +321,9 @@
    "testamento": "AT",
    "capitoli": 48,
    "versetti": 1273,
-   "stato": "da-fare",
-   "cambiati": 19,
-   "titoli": 0,
+   "stato": "rivisto",
+   "cambiati": 588,
+   "titoli": 130,
    "file": "testo/26-ezechiele.json"
   },
   {
@@ -347,7 +346,7 @@
    "capitoli": 14,
    "versetti": 197,
    "stato": "rivisto",
-   "cambiati": 115,
+   "cambiati": 161,
    "titoli": 25,
    "file": "testo/28-osea.json"
   },
@@ -371,7 +370,7 @@
    "capitoli": 9,
    "versetti": 146,
    "stato": "rivisto",
-   "cambiati": 76,
+   "cambiati": 87,
    "titoli": 21,
    "file": "testo/30-amos.json"
   },
@@ -383,7 +382,7 @@
    "capitoli": 1,
    "versetti": 21,
    "stato": "rivisto",
-   "cambiati": 15,
+   "cambiati": 21,
    "titoli": 3,
    "file": "testo/31-abdia.json"
   },
@@ -407,7 +406,7 @@
    "capitoli": 7,
    "versetti": 105,
    "stato": "rivisto",
-   "cambiati": 66,
+   "cambiati": 103,
    "titoli": 15,
    "file": "testo/33-michea.json"
   },
@@ -419,7 +418,7 @@
    "capitoli": 3,
    "versetti": 47,
    "stato": "rivisto",
-   "cambiati": 34,
+   "cambiati": 38,
    "titoli": 6,
    "file": "testo/34-nahum.json"
   },
@@ -431,7 +430,7 @@
    "capitoli": 3,
    "versetti": 56,
    "stato": "rivisto",
-   "cambiati": 29,
+   "cambiati": 36,
    "titoli": 8,
    "file": "testo/35-abacuc.json"
   },
@@ -443,7 +442,7 @@
    "capitoli": 3,
    "versetti": 53,
    "stato": "rivisto",
-   "cambiati": 34,
+   "cambiati": 44,
    "titoli": 7,
    "file": "testo/36-sofonia.json"
   },
@@ -467,7 +466,7 @@
    "capitoli": 14,
    "versetti": 211,
    "stato": "rivisto",
-   "cambiati": 100,
+   "cambiati": 114,
    "titoli": 30,
    "file": "testo/38-zaccaria.json"
   },
@@ -539,7 +538,7 @@
    "capitoli": 28,
    "versetti": 1007,
    "stato": "rivisto",
-   "cambiati": 343,
+   "cambiati": 344,
    "titoli": 168,
    "file": "testo/44-atti.json"
   },
@@ -551,7 +550,7 @@
    "capitoli": 16,
    "versetti": 433,
    "stato": "rivisto",
-   "cambiati": 139,
+   "cambiati": 140,
    "titoli": 62,
    "file": "testo/45-romani.json"
   },
@@ -563,7 +562,7 @@
    "capitoli": 16,
    "versetti": 437,
    "stato": "rivisto",
-   "cambiati": 156,
+   "cambiati": 204,
    "titoli": 63,
    "file": "testo/46-1-corinzi.json"
   },
@@ -575,7 +574,7 @@
    "capitoli": 13,
    "versetti": 256,
    "stato": "rivisto",
-   "cambiati": 155,
+   "cambiati": 183,
    "titoli": 49,
    "file": "testo/47-2-corinzi.json"
   },
@@ -599,7 +598,7 @@
    "capitoli": 6,
    "versetti": 155,
    "stato": "rivisto",
-   "cambiati": 69,
+   "cambiati": 70,
    "titoli": 18,
    "file": "testo/49-efesini.json"
   },
@@ -659,7 +658,7 @@
    "capitoli": 6,
    "versetti": 113,
    "stato": "rivisto",
-   "cambiati": 43,
+   "cambiati": 44,
    "titoli": 14,
    "file": "testo/54-1-timoteo.json"
   },
@@ -671,7 +670,7 @@
    "capitoli": 4,
    "versetti": 83,
    "stato": "rivisto",
-   "cambiati": 23,
+   "cambiati": 26,
    "titoli": 10,
    "file": "testo/55-2-timoteo.json"
   },
@@ -695,7 +694,7 @@
    "capitoli": 1,
    "versetti": 25,
    "stato": "rivisto",
-   "cambiati": 12,
+   "cambiati": 13,
    "titoli": 3,
    "file": "testo/57-filemone.json"
   },
@@ -731,7 +730,7 @@
    "capitoli": 5,
    "versetti": 105,
    "stato": "rivisto",
-   "cambiati": 48,
+   "cambiati": 50,
    "titoli": 13,
    "file": "testo/60-1-pietro.json"
   },
@@ -803,7 +802,7 @@
    "capitoli": 22,
    "versetti": 405,
    "stato": "rivisto",
-   "cambiati": 94,
+   "cambiati": 95,
    "titoli": 51,
    "file": "testo/66-apocalisse.json"
   }
