@@ -10,7 +10,7 @@
   "daFare": 0,
   "versetti": 31104,
   "versettiRivisti": 31104,
-  "cambiati": 13927,
+  "cambiati": 13935,
   "titoli": 4032
  },
  "libri": [
@@ -58,7 +58,7 @@
    "capitoli": 36,
    "versetti": 1288,
    "stato": "rivisto",
-   "cambiati": 473,
+   "cambiati": 476,
    "titoli": 109,
    "file": "testo/04-numeri.json"
   },
@@ -82,7 +82,7 @@
    "capitoli": 24,
    "versetti": 658,
    "stato": "rivisto",
-   "cambiati": 184,
+   "cambiati": 185,
    "titoli": 84,
    "file": "testo/06-giosue.json"
   },
@@ -178,7 +178,7 @@
    "capitoli": 36,
    "versetti": 822,
    "stato": "rivisto",
-   "cambiati": 337,
+   "cambiati": 339,
    "titoli": 114,
    "file": "testo/14-2-cronache.json"
   },
@@ -310,7 +310,7 @@
    "capitoli": 5,
    "versetti": 154,
    "stato": "rivisto",
-   "cambiati": 113,
+   "cambiati": 115,
    "titoli": 17,
    "file": "testo/25-lamentazioni.json"
   },
