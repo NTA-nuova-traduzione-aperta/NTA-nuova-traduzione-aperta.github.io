@@ -10,7 +10,7 @@
   "daFare": 0,
   "versetti": 31104,
   "versettiRivisti": 31104,
-  "cambiati": 13936,
+  "cambiati": 13949,
   "titoli": 4032
  },
  "libri": [
@@ -238,7 +238,7 @@
    "capitoli": 150,
    "versetti": 2460,
    "stato": "rivisto",
-   "cambiati": 2265,
+   "cambiati": 2278,
    "titoli": 170,
    "file": "testo/19-salmi.json"
   },
